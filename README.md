@@ -8,5 +8,17 @@
 * `2018年07月06日学习记录`
   * JavaEE日常工作经验总结系列（一）-----Java8优雅去重
   * JavaEE日常工作经验总结系列（二）-----代码规范
+  * CentOS7的安装
+  * CentOS7常用命令
+  * CentOS7安装JDK1.8
+  * CentOS7负载均衡服务器Nginx
+  * centos7网卡配置
+  * nginx使用ssl模块配置HTTPS支持
+  * CentOS7安装Jexus
+  * CentOS7安装MariaDB
+  * CentOS7安装Mono
+  * CentOS7安装Redis
+  * CentOS7安装Tomcat
+  * CentOS7安装防火墙
 
 
