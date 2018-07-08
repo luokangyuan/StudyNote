@@ -43,4 +43,9 @@
   * JavaEE基础知识学习----抽象类和接口
   * JavaEE基础知识学习----多态
   * JavaEE基础知识学习----泛型
+  * JavaEE基础知识学习----前端规范ES5
+  * JavaEE基础知识学习----Static关键字
+  * JavaEE基础知识学习-----Typora常用快捷键
+  * JavaEE基础知识学习-----Webstrom常用快捷键
+  * JavaEE基础知识学习----单例模式
 
