@@ -5,9 +5,9 @@ Java中的数据结构关系如下图所示
 ### List：有序的可重复的Collection
 使用此接口能够精确的控制每一个元素插入的位置，可以通过索引来访问List中的元素。
 
-1. ArrayList采用数组实现，数组的访问速度要比链表快，所以ArrayList更适合查询操作，
-2. LinkedList采用链表实现，随机插入和删除的效率要高于数组，
-3. Vector是一种古老的实现类，采用数组的实现，内部方法使用了Sychronized关键字，是线程安全的。
+* ArrayList采用数组实现，数组的访问速度要比链表快，所以ArrayList更适合查询操作，
+* LinkedList采用链表实现，随机插入和删除的效率要高于数组，
+* Vector是一种古老的实现类，采用数组的实现，内部方法使用了Sychronized关键字，是线程安全的。
 
 List相关知识总结如下：
 ![](https://i.imgur.com/WBcFZ48.jpg)
@@ -18,7 +18,6 @@ List相关知识总结如下：
 
 Map相关知识总结如下：
 ![](https://i.imgur.com/ilDYtjy.jpg)
-
 Java数据结构的详细信息可以参考我写的其他博客。
 
 
