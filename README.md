@@ -48,4 +48,11 @@
   * JavaEE基础知识学习-----Typora常用快捷键
   * JavaEE基础知识学习-----Webstrom常用快捷键
   * JavaEE基础知识学习----单例模式
+  * JavaEE基础知识学习----MyBatis（一）简介
+  * JavaEE基础知识学习----MyBatis（二）全局配置文件
+  * JavaEE基础知识学习----MyBatis（三）映射文件
+  * JavaEE基础知识学习----MyBatis（四）动态SQL
+  * JavaEE基础知识学习----MyBatis（五）缓存机制
+  * JavaEE基础知识学习----MyBatis（六）MBG逆向工程
+  * JavaEE基础知识学习----MyBatis（七）插件开发
 
