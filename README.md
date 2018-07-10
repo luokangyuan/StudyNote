@@ -68,4 +68,10 @@
   * JavaEE基础知识学习----PostgreSQL数据库（三）条件查询
   * JavaEE基础知识学习----PostgreSQL数据库（四）连接
   * JavaEE基础知识学习----PostgreSQL数据库（五）高级部分
+  * JavaEE基础知识学习----Final关键字
+  * JavaEE基础知识学习----Object类
+  * JavaEE基础知识学习-----P3C问题总结
+  * JavaEE进阶知识学习----Java8-1-Lambda表达式
+  * JavaEE进阶知识学习----Java8-2-函数式接口
+  * JavaEE进阶知识学习----Java8-3-方法引用和构造器引用
 
