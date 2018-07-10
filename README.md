@@ -55,4 +55,12 @@
   * JavaEE基础知识学习----MyBatis（五）缓存机制
   * JavaEE基础知识学习----MyBatis（六）MBG逆向工程
   * JavaEE基础知识学习----MyBatis（七）插件开发
+* `2018年07月10日学习记录`
+  * JavaEE基础知识学习---MySql数据库（一）数据库简介
+  * JavaEE基础知识学习---MySql数据库（二）DQL语言
+  * JavaEE基础知识学习---MySql数据库（三）DML语言
+  * JavaEE基础知识学习---MySql数据库（四）DDL语言
+  * JavaEE基础知识学习---MySql数据库（五）数据库事务
+  * JavaEE基础知识学习---MySql数据库（六）数据库视图
+  * JavaEE基础知识学习---MySql数据库（七）数据库存储过程
 
