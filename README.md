@@ -63,4 +63,9 @@
   * JavaEE基础知识学习---MySql数据库（五）数据库事务
   * JavaEE基础知识学习---MySql数据库（六）数据库视图
   * JavaEE基础知识学习---MySql数据库（七）数据库存储过程
+  * JavaEE基础知识学习----PostgreSQL数据库（一）基础部分
+  * JavaEE基础知识学习----PostgreSQL数据库（二）查询工具
+  * JavaEE基础知识学习----PostgreSQL数据库（三）条件查询
+  * JavaEE基础知识学习----PostgreSQL数据库（四）连接
+  * JavaEE基础知识学习----PostgreSQL数据库（五）高级部分
 
