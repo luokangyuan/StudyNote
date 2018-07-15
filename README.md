@@ -5,7 +5,6 @@
   * JavaEE进阶知识学习-----SpringCloud学习总结
   * 前端基础知识学习---Vue.js学习总结
   * JavaEE基础知识学习-----Mysql学习总结
-
 * `2018年07月06日学习记录`
   * JavaEE日常工作经验总结系列（一）-----Java8优雅去重
   * JavaEE日常工作经验总结系列（二）-----代码规范
@@ -21,7 +20,6 @@
   * CentOS7安装Redis
   * CentOS7安装Tomcat
   * CentOS7安装防火墙
-
 * `2018年07月08日学习记录`
   * JavaEE进阶知识学习-----Java8新特性学习总结
   * JavaEE进阶知识学习-----PostgreSQL学习总结
@@ -41,7 +39,6 @@
   * JavaEE基础知识学习----集合之ArrayList
   * JavaEE基础知识学习----集合
   * JavaEE基础知识学习----观察者模式
-
 * `2018年07月09日学习记录`
   * JavaEE基础知识学习----抽象类和接口
   * JavaEE基础知识学习----多态
@@ -58,7 +55,6 @@
   * JavaEE基础知识学习----MyBatis（五）缓存机制
   * JavaEE基础知识学习----MyBatis（六）MBG逆向工程
   * JavaEE基础知识学习----MyBatis（七）插件开发
-
 * `2018年07月10日学习记录`
   * JavaEE基础知识学习---MySql数据库（一）数据库简介
   * JavaEE基础知识学习---MySql数据库（二）DQL语言
@@ -78,7 +74,6 @@
   * JavaEE进阶知识学习----Java8-1-Lambda表达式
   * JavaEE进阶知识学习----Java8-2-函数式接口
   * JavaEE进阶知识学习----Java8-3-方法引用和构造器引用
-
 * `2018年07月11日学习记录`
   * JavaEE进阶知识学习----Java8-4-1-StreamAPI
   * JavaEE进阶知识学习----Java8-4-2-StreamAPI
@@ -89,5 +84,15 @@
   * jQuery1.7 中文手册
   * jQuery1.11.3 中文手册
   * W3School手册
+* `2018年07月14日学习记录`
+  * 前端基础知识学习---CSS3总结（一）选择器
+  * 前端基础知识学习---CSS3总结（二）新增UI方案
+  * 前端基础知识学习---CSS3总结（三）渐变实例发廊灯
+  * 前端基础知识学习---CSS3总结（四）渐变实例光斑动画
+* `2018年07月15日学习记录`
+  * JavaEE进阶知识学习----JavaNIO-1-缓冲区-通道
+  * JavaEE进阶知识学习----JavaNIO-2-分散读取和聚集写入-阻塞网络通信
+  * JavaEE进阶知识学习----JavaNIO-3-非阻塞式-DatagramChannel
+  * JavaEE进阶知识学习----JavaNIO-4-NIO2-File类
 
 
