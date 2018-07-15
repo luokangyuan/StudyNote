@@ -83,8 +83,14 @@
   * JavaEE进阶知识学习----Java8-4-1-StreamAPI
   * JavaEE进阶知识学习----Java8-4-2-StreamAPI
   * JavaEE进阶知识学习----Java8-6-时间API
+* `2018年07月12日学习记录`
+  * CSS 3.0参考手册
+  * JavaScript核心参考手册
+  * jQuery1.7 中文手册
+  * jQuery1.11.3 中文手册
+  * W3School手册
 
 
 
-    
+​    
 
