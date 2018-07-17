@@ -966,3 +966,5 @@ background-image:radial-gradient(closest-corner  circle at 10px 10px,red,blue);
 background-image:repeating-radial-gradient(closest-corner  circle,red 30%,blue 50%);
 ```
 
+## 过渡
+
