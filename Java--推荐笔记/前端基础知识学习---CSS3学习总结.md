@@ -1156,6 +1156,14 @@ transform-origin CSS属性让你更改一个元素变形的基点。
 
 如果只设置scaleZ(number)，你会发现元素并没有被扩大或压缩，scaleZ(number)需要和translateZ(length)配合使用，number乘以length得到的值，是元素沿Z轴移动的距离，从而使得感觉被扩大或压缩 
 
+### `3D旋转`
+
+CSS3中的3D旋转主要包括四个功能函数：`rotateX(angle)`、 `rotateY(angle)`、` rotateZ(angle)`、`rotate3d(x,y,z,angle)`
+
+x, y, z分别接受一个数值(number),用来计算矢量方向(direction vector)，矢量方向是三维空间中的一条线, 从坐标系原点到x, y, z值确定的那个点，元素围绕这条线旋转angle指定的值
+
+
+
 
 
 
