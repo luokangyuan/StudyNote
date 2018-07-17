@@ -1146,6 +1146,16 @@ transform-origin CSS属性让你更改一个元素变形的基点。
 * 对某一元素应用倾斜变换 skew(α, β)，使用矩阵变换函数 `matrix(1, tanβ, tanα,1, 0, 0)。`
 * 对某一元素应用缩放变换 scale(scaleX, scaleY)，使用矩阵变换函数 `matrix(scaleX, 0, 0, scaleY, 0, 0)`
 
+## 3D变形
+
+在浏览器中，X轴是从左到右，Y轴是从上到下，Z轴是从里到外
+
+### `3D缩放`
+
+`transform: scale3d(scaleX,scaleY,scaleZ);`或者`transform: scaleZ(number)`
+
+如果只设置scaleZ(number)，你会发现元素并没有被扩大或压缩，scaleZ(number)需要和translateZ(length)配合使用，number乘以length得到的值，是元素沿Z轴移动的距离，从而使得感觉被扩大或压缩 
+
 
 
 
