@@ -1052,3 +1052,13 @@ transition-timing-function:linear,ease,ease;
 > 1.超出的情况下是会被全部截掉的
 > 2.不够的时候，关于时间的会重复列表，transition-timing-function的时候使用的是默认值ease
 
+## 2D变换（变形）transform
+
+transform 属性允许你修改CSS视觉格式模型的坐标空间，transform 属性 , `只对 block 级元素生效`！
+
+* 旋转（rotate）
+* 平移（translate）
+* 倾斜（skew）
+* 缩放（scale）
+* 基点的变换
+
