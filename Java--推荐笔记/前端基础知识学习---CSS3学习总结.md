@@ -989,3 +989,66 @@ background-image:repeating-radial-gradient(closest-corner  circle,red 30%,blue 5
 
 *  none： 没有过渡动画。
 *  all ：所有可被动画的属性都表现出过渡动画。
+
+### transition-duration
+
+属性以秒或毫秒为单位指定过渡动画所需的时间。默认值为 `0s` (`一定要带单位`)，表示不出现过渡动画。
+
+可以指定多个时长，每个时长会被应用到由 transition-property 指定的对应属性上。如果指定的时长个数小于属性个数，那么时长列表会重复。如果时长列表更长，那么该列表会被裁减。两种情况下，属性列表都保持不变。
+
+默认值：
+
+* 属性值： 以毫秒或秒为单位的数值` <time> 类型`。表示过渡属性从旧的值转变到新的值所需要的时间。
+
+
+> 如果时长是 0s ，表示不会呈现过渡动画，属性会瞬间完成转变。不接受负值。一定要加单位(不能写0 一定要写0s  1s,0s,1s)！
+
+### transition-timing-function
+
+CSS属性受到 transition的影响，会产生不断变化的中间值，而 CSS transition-timing-function 属性用来描述这个中间值是怎样计算的。实质上，通过这个函数会建立一条加速度曲线，因此在整个transition变化过程中，变化速度可以不断改变
+
+属性值：
+
+* ease：（加速然后减速）默认值，ease函数等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)
+* linear：（匀速），linear 函数等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)
+* ease-in：(加速)，ease-in 函数等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)
+* ease-out：（减速），ease-out 函数等同于贝塞尔曲线(0, 0, 0.58, 1.0)
+* ease-in-out：（加速然后减速），ease-in-out 函数等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)
+* cubic-bezier： 贝塞尔曲线
+* step-start：等同于steps(1,start)
+* step-end：等同于steps(1,end)
+  * `steps(<integer>,[,[start|end]]?)`
+  * 第一个参数：必须为正整数，指定函数的步数
+  * 第二个参数：指定每一步的值发生变化的时间点（默认值end）
+
+### transition-delay
+
+规定了在过渡效果开始作用之前需要等待的时间。默认值：0s;
+
+你可以指定多个延迟时间，每个延迟将会分别作用于你所指定的相符合的css属性。如果指定的时长个数小于属性个数，那么时长列表会重复。如果时长列表更长，那么该列表会被裁减。两种情况下，属性列表都保持不变
+
+ 值以秒（s）或毫秒（ms）为单位，表明动画过渡效果将在何时开始。`取值为正时会延迟一段时间来响应过渡效果；取值为负时会导致过渡立即开始`
+
+### 当属性值的列表长度不一致时
+
+```css
+transition-property: background,width,height;
+transition-duration: 3s,2s;
+transition-delay:3s,2s;
+transition-timing-function:linear;
+```
+
+`实际效果如下`
+
+```css
+transition-property: background,width,height;
+transition-duration: 3s,2s,3s;
+transition-delay:3s,2s,3s;
+transition-timing-function:linear,ease,ease;
+```
+
+> 说明：
+>
+> 1.超出的情况下是会被全部截掉的
+> 2.不够的时候，关于时间的会重复列表，transition-timing-function的时候使用的是默认值ease
+
