@@ -1111,5 +1111,42 @@ transform:skew(45deg,15deg);//  第一个参数代表与y轴之间的角度, 第
 
 ### `缩放（scale）`
 
+X方向缩放:transform:  scaleX(sx); 
+
+```css
+transform: scaleX(2);
+```
+
+Y方向缩放:transform:  scaleY(sy);
+
+```css
+transform: scaleY(.5);
+```
+
+二维缩放 :transform:  scale(sx[, sy]);  (如果sy 未指定，默认认为和sx的值相同)  
+
+```css
+transform: scale(2,.5);
+```
+
+要缩小请设0.01～0.99之间的值，要放大请设超过1的值。单值时表示只X轴,Y轴上缩放粒度一样，如transform: scale(2);等价于transform: scale(2,2);
+
+> 注意：以上的变换都是基于中心原点变换，改变基点，使用`transform-origin: 100% 100%;`属性
+
+### `基点变换transform-origin`
+
+transform-origin CSS属性让你更改一个元素变形的基点。
+
+### `矩阵（matrix）`
+
+在 2D变换 中，矩阵变换函数 matrix() 接受 6个值，语法形式如下：` transform: matrix(a, b, c, d, e, f);   `
+
+* 对某一元素应用旋转变换 rotate(θ)，使用矩阵实现 `matrix(cosθ, sinθ, -sinθ, cosθ, 0, 0)`
+* 对某一元素应用旋转变换 translate(X, Y)，使用矩阵实现： `matrix(1, 0, 0, 1, X, Y)`
+* 对某一元素应用倾斜变换 skew(α, β)，使用矩阵变换函数 `matrix(1, tanβ, tanα,1, 0, 0)。`
+* 对某一元素应用缩放变换 scale(scaleX, scaleY)，使用矩阵变换函数 `matrix(scaleX, 0, 0, scaleY, 0, 0)`
+
+
+
 
 
