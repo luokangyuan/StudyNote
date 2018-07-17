@@ -1061,4 +1061,55 @@ transform 属性允许你修改CSS视觉格式模型的坐标空间，transform 
 * 倾斜（skew）
 * 缩放（scale）
 * 基点的变换
+* 矩阵（matrix）
+  * 旋转
+  * 平移
+  * 倾斜
+  * 缩放
+
+### `旋转（rotate）`
+
+```css
+transform:rotate(angle);   
+```
+
+正值:顺时针旋转  rotate(360deg),  负值:逆时针旋转  rotate(-360deg)
+
+>  只能设单值。正数表示顺时针旋转，负数表示逆时针旋转
+
+### `平移（translate）`
+
+X方向平移:`transform:  translateX(tx)`，Y方向平移:`transform:  translateY(ty) `
+二维平移：transform:  translate(tx, ty)； 如果ty没有指定，它的值默认为0。
+
+> 说明：可设单值，可设双值，正数表示XY轴正向位移，负数为反向位移。设单值表示只X轴位移，Y轴坐标不变，
+
+```css
+transform: translate(100px,200px);// 斜着移动
+transform: translate(100px,0);
+```
+
+### `倾斜（skew）`
+
+X方向倾斜:transform:  skewX(angle)
+
+```css
+transform:  skewX(45deg) // 参数值以deg为单位 代表与y轴之间的角度
+```
+
+ Y方向倾斜:transform:  skewY(angle)
+
+```css
+transform:  skewY(45deg) //  参数值以deg为单位 代表与x轴之间的角度
+```
+
+ 二维倾斜:transform:  skew(ax[, ay]);  如果ay未提供，在Y轴上没有倾斜
+
+```css
+transform:skew(45deg,15deg);//  第一个参数代表与y轴之间的角度, 第二个参数代表与x轴之间的角度
+```
+
+### `缩放（scale）`
+
+
 
