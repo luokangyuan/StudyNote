@@ -966,5 +966,26 @@ background-image:radial-gradient(closest-corner  circle at 10px 10px,red,blue);
 background-image:repeating-radial-gradient(closest-corner  circle,red 30%,blue 50%);
 ```
 
-## 过渡
+## 过渡transition
 
+ CSS transition 提供了一种在更改CSS属性时控制动画速度的方法。 其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义
+
+ transition是一个简写属性，用于 transition-property,transition-duration,transition-timing-function, 和transition-delay。 
+
+> 注意：在transition属性中，各个值的书写顺序是很重要的：第一个可以解析为时间的值会被赋值给transition-duration，第二个可以解析为时间的值会被赋值给transition-delay
+
+
+`transition`分为一下属性：`transition-property `，`transition-duration`，`transition-timing-function`，`transition-delay`
+
+### transition-property
+
+指定应用过渡属性的名称，默认值为 all，表示所有可被动画的属性都表现出过渡动,可以指定`多个 property `
+
+> 注意：不是所有的属性都可以添加动画过渡的，过渡时间必须带单位s秒
+
+那些属性可以添加动画过渡，[参看这个连接](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animated_properties)
+
+默认值：
+
+*  none： 没有过渡动画。
+*  all ：所有可被动画的属性都表现出过渡动画。
