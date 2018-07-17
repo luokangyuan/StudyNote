@@ -1162,6 +1162,16 @@ CSS3中的3D旋转主要包括四个功能函数：`rotateX(angle)`、 `rotateY(
 
 x, y, z分别接受一个数值(number),用来计算矢量方向(direction vector)，矢量方向是三维空间中的一条线, 从坐标系原点到x, y, z值确定的那个点，元素围绕这条线旋转angle指定的值
 
+### `3D平移`
+
+`transform: translateZ(length)`是3D Transformaton特有的，其他两个2D中就有
+
+>  translateZ  它不能是百分比值; 那样的移动是没有意义的。
+
+`transform: translate3d(translateX,translateY,translateZ)`;
+
+> translateZ  它不能是百分比值; 那样的移动是没有意义的。
+
 
 
 
