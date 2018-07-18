@@ -1172,6 +1172,16 @@ x, y, z分别接受一个数值(number),用来计算矢量方向(direction vecto
 
 > translateZ  它不能是百分比值; 那样的移动是没有意义的。
 
+## 景深（perspective）
+
+## 动画（Animation）
+
+
+
+
+
+
+
 
 
 
