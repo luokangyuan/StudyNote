@@ -1210,6 +1210,25 @@ animation-timing-function属性定义CSS动画在每一动画周期中执行的�
 
 ### ` animation-iteration-count`
 
+定义了动画执行的次数（`属于动画内的范畴`）,值为`infinite`表示 无限循环播放动画.`<number>`表示动画播放的次数 `不可为负值. `
+
+### `animation-direction`
+
+定义了动画执行的方向
+
+* normal： 每个循环内动画向前循环，换言之，每个动画循环结束，动画重置到起点重新开始，默认属性。
+*  alternate：动画交替反向运行，反向运行时，动画按步后退，同时，带时间功能的函数也反向， 比如，ease-in 在反向时成为ease-out。计数取决于开始时是奇数迭代还是偶数迭       代
+* reverse：反向运行动画，每周期结束动画由尾到头运行。
+* alternate-reverse：反向交替， 反向开始交替
+
+### `animation-fill-mode`
+
+属于动画外的范畴，定义动画在`动画外的状态`
+
+### `animation-play-state`
+
+定义了动画执行的运行和暂停
+
 
 
 
