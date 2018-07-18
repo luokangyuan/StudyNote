@@ -1180,6 +1180,39 @@ css3动画就是使元素从一种样式逐渐变化为另一种样式的效果�
 
 > 在每个动画定义中，顺序很重要：可以被解析为 <time>的第一个值被分配给animation-duration, 第二个分配给 animation-delay。
 
+### 关键帧（@keyframes）
+
+语法如下：
+
+```css
+ @keyframes animiationName{
+     keyframes-selector{
+         css-style;
+     }
+}
+```
+
+>  animiationName:必写项，定义动画的名称, keyframes-selector：必写项，动画持续时间的百分比，  from：0%
+> to：100%， css-style：css声明
+
+示例如下：
+
+```css
+#wran{
+    animation-name :move
+}
+@keyframes move{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+```
+
+
+
 ### `animation-name`
 
 animation-name属性指定应用的一系列动画，每个名称代表一个由@keyframes定义的动画序列
@@ -1227,7 +1260,7 @@ animation-timing-function属性定义CSS动画在每一动画周期中执行的�
 
 ### `animation-play-state`
 
-定义了动画执行的运行和暂停
+定义了动画执行的运行和暂停， `running`表示当前动画正在运行。`paused`表示当前动画以被停止。
 
 
 
