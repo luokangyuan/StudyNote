@@ -1184,9 +1184,13 @@ css3动画就是使元素从一种样式逐渐变化为另一种样式的效果�
 
 animation-name属性指定应用的一系列动画，每个名称代表一个由@keyframes定义的动画序列
 
+### `animation-duration`
 
+animation-duration属性指定一个动画周期的时长。默认值为0s，表示无动画。一个动画周期的时长，单位为秒(s)或者毫秒(ms)，无单位值无效。
 
+> 注意：负值无效，浏览器会忽略该声明，但是一些早起的带前缀的声明会将负值当作0s
 
+### `animation-timing-function`
 
 
 
