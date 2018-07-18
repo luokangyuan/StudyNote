@@ -1268,3 +1268,11 @@ CSS3 弹性盒子(Flexible Box 或 Flexbox)，是一种用于在页面上布置�
 
 
 
+### 新版本flex布局
+
+
+
+
+
+
+
