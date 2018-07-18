@@ -1176,7 +1176,13 @@ x, y, z分别接受一个数值(number),用来计算矢量方向(direction vecto
 
 ## 动画（Animation）
 
+css3动画就是使元素从一种样式逐渐变化为另一种样式的效果，animation属性是一个简写属性形式: （可以用来描述可动画的属性） [可动画属性的列表]( https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties )
 
+> 在每个动画定义中，顺序很重要：可以被解析为 <time>的第一个值被分配给animation-duration, 第二个分配给 animation-delay。
+
+### `animation-name`
+
+animation-name属性指定应用的一系列动画，每个名称代表一个由@keyframes定义的动画序列
 
 
 
