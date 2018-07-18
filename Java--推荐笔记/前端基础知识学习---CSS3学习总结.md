@@ -1211,8 +1211,6 @@ css3动画就是使元素从一种样式逐渐变化为另一种样式的效果�
 }
 ```
 
-
-
 ### `animation-name`
 
 animation-name属性指定应用的一系列动画，每个名称代表一个由@keyframes定义的动画序列
@@ -1262,7 +1260,9 @@ animation-timing-function属性定义CSS动画在每一动画周期中执行的�
 
 定义了动画执行的运行和暂停， `running`表示当前动画正在运行。`paused`表示当前动画以被停止。
 
+## 布局扩展
 
+### flex布局
 
 
 
