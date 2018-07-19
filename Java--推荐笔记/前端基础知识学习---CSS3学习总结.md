@@ -1364,3 +1364,85 @@ align-items: stretch;
 * `baseline`(box 没有的)：按照基线对齐
 * ` stretch`(box 没有的)：等高布局
 
+`有关布局的HTML结构如下`
+
+```html
+<div id="warp">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+</div>
+```
+
+> 说明：id="warp"为容器，`<div class="item">1</div>`为项目
+
+### flex布局总结
+
+* 明确什么是容器，什么是项目，什么是主轴，什么是侧轴
+* 项目永远排列在主轴上
+* flex布局分为两个版本：`-webkit-box-`和`flex`
+
+#### 老版本
+
+##### 容器
+
+* 容器的布局方向：`-webkit-box-orient:horizontal/vertical`,控制主轴是哪一根，
+  * horizontal：x轴，vertical  ：y轴
+* 容器的排列方向：`-webkit-box-direction：normal/reverse`控制主轴的方向，
+  * normal：从左往右（正方向）reverse：从右往左（反方向）
+* 富裕空间的管理：`只决定富裕空间的位置，不会给项目区分配空间`
+  * 主轴：`-webkit-box-pack`
+    * 主轴是x轴
+      * start：在右边
+      * end:	在左边
+      * center：在两边
+      * justify：在项目之间
+    * 主轴是y轴
+      * start：在下边
+      * end：在上边
+      * center：在两边
+      * justify：在项目之间
+  * 侧轴：`-webkit-box-algin`
+    * 侧轴是x轴
+      * start：在右边
+      * end：  在左边
+      * center：在两边
+    * 侧轴是y轴
+      * start：在下边
+      * end：   在上边	
+      * center：在两边
+
+##### 项目
+
+* 弹性空间管理：`-webkit-box-flex`：弹性因子（默认值为0）
+
+#### 新版本
+
+##### 容器
+
+容器的布局方向和容器的排列方向使用一个属性`flex-direction`,控制主轴是哪一根，控制主轴的方向
+
+* row;		从左往右的x轴	
+* row-reverse;从右往左的x轴
+* column;		从上往下的y轴
+* column-reverse;从下往上的y轴
+
+富裕空间的管理：只决定富裕空间的位置，不会给项目区分配空间
+
+* 主轴`justify-content`
+  * flex-start：		在主轴的正方向
+  * flex-end:		在主轴的反方向
+  * center：			在两边
+  * space-between：	在项目之间
+  * space-around：  在项目两边
+* 侧轴`align-items`
+  * flex-start：在侧轴的正方向
+  * flex-end：    在侧轴的反方向
+  * center：		在两边
+  * baseline    基线对齐
+  * stretch		等高布局（项目没有高度）
+
+### 新版flex布局详解
+
