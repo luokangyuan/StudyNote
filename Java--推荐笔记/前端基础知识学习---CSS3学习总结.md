@@ -1361,6 +1361,6 @@ align-items: stretch;
 *  `flex-start`：富裕空间在`侧轴的正方向`
 * `flex-end`：富裕空间在`侧轴的反方向`
 * `center`：富裕空间在`侧轴的两边`
-* `baseline`(box 没有的)：
-* ` stretch`(box 没有的)：
+* `baseline`(box 没有的)：按照基线对齐
+* ` stretch`(box 没有的)：等高布局
 
