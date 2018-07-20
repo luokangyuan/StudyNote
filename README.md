@@ -131,6 +131,18 @@
 
   * JavaEE进阶知识学习----SpringBoot-6-表单验证知识
 
+  * JavaEE进阶知识学习----SpringBoot-7-AOP处理请求知识
+
+  * JavaEE进阶知识学习----SpringBoot-8-异常处理知识
+
+  * JavaEE进阶知识学习----SpringBoot-9-单元测试知识
+
+  * JavaEE进阶知识学习----SpringBoot-10-配置文件
+
+  * JavaEE进阶知识学习----SpringBoot-11-日志框架
+
+  * JavaEE进阶知识学习----SpringBoot-12-web
+
     
 
 
