@@ -1448,3 +1448,4 @@ align-items: stretch;
 
 #### 容器
 
+* flex-wrap：控制的是侧轴的方向
