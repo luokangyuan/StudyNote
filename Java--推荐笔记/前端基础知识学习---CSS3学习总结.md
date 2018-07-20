@@ -1396,7 +1396,7 @@ align-items: stretch;
   * 主轴：`-webkit-box-pack`
     * 主轴是x轴
       * start：在右边
-      * end:	在左边
+      	 end:	在左边
       * center：在两边
       * justify：在项目之间
     * 主轴是y轴
@@ -1411,7 +1411,7 @@ align-items: stretch;
       * center：在两边
     * 侧轴是y轴
       * start：在下边
-      * end：   在上边	
+      	 end：   在上边	
       * center：在两边
 
 ##### 项目
@@ -1426,23 +1426,23 @@ align-items: stretch;
 
 * row;		从左往右的x轴	
 * row-reverse;从右往左的x轴
-* column;		从上往下的y轴
+	 column;		从上往下的y轴
 * column-reverse;从下往上的y轴
 
 富裕空间的管理：只决定富裕空间的位置，不会给项目区分配空间
 
 * 主轴`justify-content`
   * flex-start：		在主轴的正方向
-  * flex-end:		在主轴的反方向
-  * center：			在两边
-  * space-between：	在项目之间
+  	 flex-end:		在主轴的反方向
+  	 center：			在两边
+  	 space-between：	在项目之间
   * space-around：  在项目两边
 * 侧轴`align-items`
   * flex-start：在侧轴的正方向
   * flex-end：    在侧轴的反方向
-  * center：		在两边
+  	 center：		在两边
   * baseline    基线对齐
-  * stretch		等高布局（项目没有高度）
+  	 stretch		等高布局（项目没有高度）
 
 ### 新版flex布局详解
 
