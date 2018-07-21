@@ -1449,3 +1449,85 @@ align-items: stretch;
 #### 容器
 
 * flex-wrap：控制的是侧轴的方向
+
+```css
+align-items: flex-start;/*对单行单列的富裕空间管理*/
+flex-wrap: wrap-reverse;/*当容器的宽度小于项目的宽度时控制是否换行显示，也就是控制侧轴的方向*/
+align-content: flex-start;/*对多行多列富裕空间的管理*/
+```
+
+> `align-content` 属性定义弹性容器的侧轴方向上有额外空间时，如何排布每一行/列。当弹性容器只有一行/列时无作用
+
+align-content值如下：
+
+* `flex-start`：所有行/列从侧轴起点开始填充。第一行/列的侧轴起点边和容器的侧轴起点边对齐。 接下来的每一行/列紧跟前一行/列。
+* `flex-end`：所有弹性元素从侧轴末尾开始填充。最后一个弹性元素的侧轴终点和容器的侧轴终点对齐。同时所有后续元素与前一个对齐。
+* `center`：所有行/列朝向容器的中心填充。每行/列互相紧挨，相对于容器居中对齐。 容器的侧轴起点边和第一行/列的距离相等于容器的侧轴终点边和最后一行/列的距离。
+* `space-between`：所有行/列在容器中平均分布。相邻两行/列间距相等。 容器的侧轴起点边和终点边分别与第一行/列和最后一行/列的边对齐。
+* `space-around`：所有行/列在容器中平均分布，相邻两行/列间距相等。容器的侧轴起点边和终点边分别与第一行/列和最后一行/列的距离是相邻两行/列间距的一半。
+* `stretch`：拉伸所有行/列来填满剩余空间。剩余空间平均的分配给每一行/列       
+
+`flex-flow 属性`
+
+flex-flow 属性是设置“flex-direction”和“flex-wrap”的简写,默认值：row nowrap    不可继承
+
+`控制主轴和侧轴的位置以及方向`
+
+#### 项目
+
+`order 属性`
+
+order 属性规定了弹性容器中的可伸缩项目在布局时的顺序。元素按照 order 属性的值的增序进行布局。拥有相同 order 属性值的元素按照它们在源代码中出现的顺序进行布局,`order越大越后`
+
+```css
+#warp > .item:nth-child(1){
+    order: 5;
+}
+#warp > .item:nth-child(2){
+    order: 3;
+}
+```
+
+`align-self 属性`
+
+align-self 会对齐当前 flex 行中的 flex 元素，并覆盖 align-items 的值. 如果任何 flex 元素的侧轴方向 margin 值设置为 auto，则会忽略 align-self。
+
+* auto：设置为父元素的 align-items 值，如果该元素没有父元素的话，就设置为 stretch。
+* flex-start：flex 元素会对齐到 cross-axis 的首端。
+* flex-end：flex 元素会对齐到 cross-axis 的尾端。
+* center： flex 元素会对齐到 cross-axis 的中间，如果该元素的 cross-size 的尺寸大于 flex 容器，将在两个方向均等溢出。
+* baseline：所有的 flex 元素会沿着基线对齐，
+* stretch：flex 元素将会基于容器的宽和高，按照自身 margin box 的 cross-size 拉伸
+
+```css
+#warp > .item:nth-child(2){
+    order: 3;
+    align-self: flex-end;
+}
+#warp > .item:nth-child(3){
+    order: 2;
+    align-self: center;
+}
+```
+
+`flex-shrink属性`
+
+ flex-grow 属性定义弹性盒子项（flex item）的拉伸因子。
+
+*   可用空间 = (容器大小 - 所有相邻项目flex-basis的总和)
+* 可扩展空间 = (可用空间/所有相邻项目flex-grow的总和)
+* 每项伸缩大小 = (伸缩基准值 + (可扩展空间 x flex-grow值))
+
+ flex-shrink 属性指定了 flex 元素的收缩因子  默认值为1
+
+*  计算收缩因子与基准值乘的总和  
+* 计算收缩因数： 收缩因数=（项目的收缩因子*项目基准值）/第一步计算总和    
+* 移除空间的计算：移除空间= 项目收缩因数 x 负溢出的空间   
+
+`flex-basis属性`
+
+flex-basis 指定了 flex 元素在主轴方向上的初始大小，默认值 ：auto  不可继承
+
+>  注意：  在flex简写属性中 flex-basis的默认值为0
+
+ 
