@@ -1,4 +1,14 @@
 # 疾风知劲草，智者必怀仁，时刻学习总结
+
+`项目说明：`
+
+* 以下笔记都是自己学习实践后总结出来的，其中不可避免存在笔误或者有理解错误的地方，欢迎指出。
+* 以下列举的笔记都可以在项目中的文件夹中找到。
+* 笔记中有格式显现错误，原因是早期总结对markdown语法不是很熟练，如果你需要原版文件，请提出。
+* 项目中有一个文件夹存放一些优质的常用API，如果你有资源，且有心想分享，请提出。
+* 一下笔记重点在于记录学习过程，对技术使用的总结笔记在我的个人博客上：[码酱博客](http://luokangyuan.com/)
+* `这个项目会持续更新，欢迎start,以资鼓励，感谢`
+
 ## 记录自己的学习轨迹
 * `2018年07月05日学习记录`
   * JavaEE进阶知识学习-----Mybatis知识总结
@@ -112,37 +122,41 @@
 * `2018年07月20日学习记录`
 
   * JavaEE进阶知识学习----Quartz-1-HelloWord
-
   * JavaEE进阶知识学习----Quartz-2-触发器Trigger
-
   * JavaEE进阶知识学习----Quartz-3-Scheduler函数
-
   * JavaEE进阶知识学习----Quartz-4-Quartz整合
-
   * JavaEE进阶知识学习----SpringBoot-1-项目初始化知识
-
   * JavaEE进阶知识学习----SpringBoot-2-配置文件知识
-
   * JavaEE进阶知识学习----SpringBoot-3-控制类知识
-
   * JavaEE进阶知识学习----SpringBoot-4-数据库知识
-
   * JavaEE进阶知识学习----SpringBoot-5-事务管理知识
-
   * JavaEE进阶知识学习----SpringBoot-6-表单验证知识
-
   * JavaEE进阶知识学习----SpringBoot-7-AOP处理请求知识
-
   * JavaEE进阶知识学习----SpringBoot-8-异常处理知识
-
   * JavaEE进阶知识学习----SpringBoot-9-单元测试知识
-
   * JavaEE进阶知识学习----SpringBoot-10-配置文件
-
   * JavaEE进阶知识学习----SpringBoot-11-日志框架
-
   * JavaEE进阶知识学习----SpringBoot-12-web
 
-    
+* `2018年07月21日学习记录`
+
+  * JavaEE进阶知识学习----SpringBoot高级（二）SpringBoot使用缓存
+  * JavaEE进阶知识学习----SpringBoot高级（六）SpringBoot整合RabbitMQ
+  * JavaEE进阶知识学习----SpringBoot高级（三）缓存注解
+  * JavaEE进阶知识学习----SpringBoot高级（四）SpringBoot整合Redis
+  * JavaEE进阶知识学习----SpringBoot高级（五）SpringBoot与消息
+  * JavaEE进阶知识学习----SpringBoot高级（一）JSR107缓存
+  * JavaEE进阶知识学习-----SpringCloud（八）Hystrix断路器
+  * JavaEE进阶知识学习-----SpringCloud（二）实践准备
+  * JavaEE进阶知识学习-----SpringCloud（九）Zuul路由网关
+  * JavaEE进阶知识学习-----SpringCloud（六）Ribbon负载均衡
+  * JavaEE进阶知识学习-----SpringCloud（七）Feign负载均衡
+  * JavaEE进阶知识学习-----SpringCloud（三）Eureka服务注册与发现
+  * JavaEE进阶知识学习-----SpringCloud（十）SpringCloudConfig配置中心
+  * JavaEE进阶知识学习-----SpringCloud（四）Eureka集群配置
+  * JavaEE进阶知识学习-----SpringCloud（五）Eureka和Zookeeper区别
+  * JavaEE进阶知识学习-----SpringCloud（一）概述
+
+  
 
 
