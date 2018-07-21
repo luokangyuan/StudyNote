@@ -1530,4 +1530,161 @@ flex-basis 指定了 flex 元素在主轴方向上的初始大小，默认值 �
 
 >  注意：  在flex简写属性中 flex-basis的默认值为0
 
- 
+ `flex实例等分布局`
+
+```html
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#warp{
+				width:500px;
+				height: 300px;
+				border: 1px solid;
+				margin: 100px auto;
+				display: flex;
+			}
+			#warp > .item{
+				height: 50px;
+				background: pink;
+				text-align: center;
+				line-height: 50px;
+                flex-shrink: 1;
+				flex-grow: 1;/*将富裕空间等分，并没有将项目等分*/
+				flex-basis: 0;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="warp">
+			<div class="item">1</div>
+			<div class="item">22</div>
+			<div class="item">333</div>
+			<div class="item">4444</div>
+			<div class="item">55555</div>
+		</div>
+	</body>
+</html>
+```
+
+`flex简写属性语法糖`
+
+```css
+flex-shrink: 1;
+flex-grow: 1;/*将富裕空间等分，并没有将项目等分*/
+flex-basis: 0;
+/*上述三个属性和下列属性语法一样*/
+flex: 1;
+```
+
+`等分布局实例，天猫导航栏`
+
+```html
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+				color: gray;
+				display: block;/*设置a标签不仅仅是可以点击文字，还可以点击div块*/
+			}
+			#nav .row{
+				display: flex;
+			}
+			#nav >.row > .item{
+				flex: 1;
+				text-align: center;
+			}
+			#nav > .row > .item > a:before{
+				content: "";
+				display: block;
+				width: 86px;
+				height: 86px;
+				margin: 0 auto;
+			}
+			#nav >.row:nth-child(1) > .item:nth-child(1) > a:before{
+				background: url(../img/01.png) no-repeat;
+			}
+			#nav >.row:nth-child(1) > .item:nth-child(2) > a:before{
+				background: url(../img/02.png) no-repeat;
+			}
+			#nav >.row:nth-child(1) > .item:nth-child(3) > a:before{
+				background: url(../img/03.png) no-repeat;
+			}
+			#nav >.row:nth-child(1) > .item:nth-child(4) > a:before{
+				background: url(../img/04.png) no-repeat;
+			}
+			#nav >.row:nth-child(1) > .item:nth-child(5) > a:before{
+				background: url(../img/05.png) no-repeat;
+			}
+			#nav >.row:nth-child(2) > .item:nth-child(1) > a:before{
+				background: url(../img/06.png) no-repeat;
+			}
+			#nav >.row:nth-child(2) > .item:nth-child(2) > a:before{
+				background: url(../img/07.png) no-repeat;
+			}
+			#nav >.row:nth-child(2) > .item:nth-child(3) > a:before{
+				background: url(../img/08.png) no-repeat;
+			}
+			#nav >.row:nth-child(2) > .item:nth-child(4) > a:before{
+				background: url(../img/09.png) no-repeat;
+			}
+			#nav >.row:nth-child(2) > .item:nth-child(5) > a:before{
+				background: url(../img/10.png) no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<div class="row">
+				<div class="item">
+					<a href="javascript;">天猫</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">聚划算</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">天猫国际</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">外卖</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">天猫超时</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="item">
+					<a href="javascript;">充值中心</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">天猫旅行</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">领金币</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">拍卖</a>
+				</div>
+				<div class="item">
+					<a href="javascript;">分类</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+```
+
