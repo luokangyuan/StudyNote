@@ -47,6 +47,7 @@ JavaScript是一种专门为网页交互设计的脚本语言，有以下三部�
 
 * 第一个字符必须是一个字母、下划线（_）或者一个美元符号（$）；
 * 其他字符可以是字母、下划线、美元符号或者数字；
+* 标识符一般采用驼峰命名法，首字母小写，每一个单词的开头字母大写（规范，不是强制要求）
 
 > 注意：不能将关键字，保留字，true，false和null用作标识符
 
@@ -58,5 +59,23 @@ ECMAScript中有单行注释和块级注释，单行注释以两个斜杠开头�
 
 ECMAScript语句以一个分号结尾，虽然不加分号也是能运行的，但是不加分号，是浏览器很会帮我们添加分号，这样依赖降低性能，二来，浏览器有时会加错分号的位置，所以，养成良好的代码编写风格，自己加。
 
-### 关键子和保留字
+### 关键字和保留字
 
+在ECMAScript中具有特定用途的标识符称之为关键字，这些关键字可表示控制语句的开始或者结束，或者用于描述一个变量等，如下：
+
+* `breake；do；instanceof；typeof；case；else；new；var,catch；finally；return；`
+* `void；continue；for；switch；while；default；if,throw；delete；in；try；`
+* `function；this；with；debugger；false；true；null`
+
+还存在一些没有特殊用途的标识符，但是以后可能有特殊用途的标识符称之为保留字，如下：
+
+* `class ；enum；extends；super；const；export；`
+* `import；implements；le:；private；public；yield；interface；package；protected；static`
+
+> 说明：在ES6中已经将let作为关键字定义变量
+
+## JavaScript数据类型
+
+### 变量
+
+在ES中，变量是`松散类型`的，所谓松散类型就是说变量可以保存任何类型的数据，换句话说，这个变量仅仅是一个用于保存值的占位符，使用关键字`var`，在ES6中推荐使用`let`关键字；
