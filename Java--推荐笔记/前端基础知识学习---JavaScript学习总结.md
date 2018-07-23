@@ -101,3 +101,47 @@ console.log(typeof a);
 console.log(Number.MAX_VALUE * Number.MAX_VALUE)/*返回的是Infinity无穷大*/
 ```
 
+### Undefined类型
+
+Undefined类型就只有一个undefined值，在使用var定义变量后，未初始化该变量，那么使用typeof检测，返回的就是undefined，例如：
+
+```javascript
+var message;
+console.log(message)/*undefined*/
+console.log(message == undefined);/*true*/
+```
+
+### Null类型
+
+NULL类型也只有一个NULL值，从逻辑角度看，这个NULL值代表的是一个空对象指针，所以当我们使用`typeof null`返回的是Object，如下：
+
+```javascript
+var user = null;
+console.log(typeof user);/*object*/
+```
+
+> 注意：如果定义变量是在将来用于保存对象，那么最好在定义的时候就初始化为NULL
+
+### Boolean类型
+
+Boolean类型有两个值，分别为:true，false；这两个值和数字值没有关系，true并不代表1，如下：
+
+```javascript
+var message = false;
+var test = true;
+```
+
+> 注意：Boolean类型的值是区分大小写的，True和False，或者大小写混写都只是代表标识符，不是Boolean值；
+
+虽然Boolean类型的值只有两个，但是在ES中任何类型的值都可以与这两个Boolean值有着等价的值，要将一个值转换为对应的Boolean值，可以调用转型函数`Boolean()`，如下所示：
+
+```javascript
+var test = "Helo";
+var testBoolean = Boolean(test);
+console.log(typeof testBoolean)/*boolean*/
+console.log(testBoolean);/*true*/
+```
+
+有关各种数据类型的转换规则如下：
+
+* String类型，非空字符转换为true，空字符串转换为false；
