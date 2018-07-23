@@ -177,3 +177,9 @@ var floatN3 = ".1";/*虽有效，但不推荐*/
 var floatN1 = "1.0";
 ```
 
+当然也可以使用科学计数法，如下：
+
+```javascript
+var floatN1 = 3.12e7;
+```
+
