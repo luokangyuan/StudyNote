@@ -145,3 +145,35 @@ console.log(testBoolean);/*true*/
 有关各种数据类型的转换规则如下：
 
 * String类型，非空字符转换为true，空字符串转换为false；
+* number类型，任何非零数字值（包括无穷大），转换为true，0和NaN转换为false；
+* Object类型，任何对象转换为true，NUL转换为false；
+
+使用这些转换规则可以更方便的使用if流程语句，例如：
+
+```javascript
+var message = "Hello Word";
+if(message){
+    console.log("我执行了。。。")/*该行代码会被执行*/
+}
+```
+
+### Number类型
+
+ES中Number数据类型包含整数和浮点数值，在JavaScript中可以使用number类型保存正零和负零，正零和负零被认为是相等的。
+
+`浮点数值`
+
+在JavaScript中浮点数值就是数值中必须包含一个小数点，并且小数点后至少有一位数字，虽然小数点前面可以没有整数，但是不建议这种写法，如下：
+
+```javascript
+var floatN1 = "1.1";
+var floatN2 = "0.1";
+var floatN3 = ".1";/*虽有效，但不推荐*/
+```
+
+由于保存浮点数值需要的内存空间是整数的两倍，所以，只要可以将浮点数转换为整数，就会转换为整数，如下：
+
+```javascript
+var floatN1 = "1.0";
+```
+
