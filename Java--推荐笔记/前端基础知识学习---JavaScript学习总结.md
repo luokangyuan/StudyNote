@@ -82,4 +82,22 @@ ECMAScript语句以一个分号结尾，虽然不加分号也是能运行的，�
 
 ### 数据类型
 
-在ES中定义了六种数据类型，其中包含了五种基本数据类型，分别是：`String，Number，Boolean，Null，Underfined`和一种复杂数据类型`Object`
+在ES中定义了六种数据类型，其中包含了五种基本数据类型，分别是：`String，Number，Boolean，Null，Underfined`和一种复杂数据类型`Object`；
+
+### typeof操作符
+
+因为在ES中的数据类型是松散类型的，因此需要一种手段来检测变量的数据类型，这个时候就使用`typeof`，使用该操作符可能返回以下值，分别为：
+
+* `underfined`：表示这个值未定义；
+* `boolean`：表示这个值是布尔值；
+* `string`：表示这个值是一个字符串；
+* `number`：表示这个值是一个数值；
+* `object`：表示这个值是一个对象或者null；
+* `function`：表示这个值是一个函数；
+
+```javascript
+var a = "hello"
+console.log(typeof a);
+console.log(Number.MAX_VALUE * Number.MAX_VALUE)/*返回的是Infinity无穷大*/
+```
+
