@@ -313,3 +313,9 @@ console.log(String(value));/*"undefined"*/
 * hasOwnProperty（propertyName）：用于检查给定的属性在当前对象实例中是否存在；
 * isPrototypeOf(object)：用于检查传入的对象是否是当前对象的原型；
 * propertyIsEnumerable(propertyName)：用于检查给定的属性能否使用for-in语句来枚举；
+* toLocaleString()：返回对象的字符串表示；
+* toString()：返回对象的字符串表示；
+* valueOf()：返回对象的字符串、数值或者布尔值。
+
+## JavaScript操作符
+
