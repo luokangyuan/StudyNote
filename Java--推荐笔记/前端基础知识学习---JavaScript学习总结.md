@@ -222,4 +222,32 @@ console.log(isNaN("hello"));/*true*/
 * 如果是NULL，返回的是0；
 * 如果是undefined，返回的是NAN；
 * 如果是字符串，具体转换如下：
-  * 
+  * 如果字符串只包含数字（包括前面的正负号），则将其转换为十进制数值；
+  * 如果字符串包含有效的浮点格式，就会转换为对应的浮点数值；
+  * 如果字符串包含有效的十六进制格式，就会转换为相同大小的十进制数值；
+  * 如果字符串是空字符串，则转换为数值0；
+  * 如果字符串不是以上类型的格式，就会转换为NaN；
+* 如果是对象，则调用对象的valueOf()方法，然后按照上述的规则转换，如果转换结果为NaN，则调用对象的toString()方法，然后再按照上述规则转换；
+
+```javascript
+console.log(Number("hello word"))/*NaN*/
+console.log(Number(""))/*0*/
+console.log(Number("0000011"))/*11*/
+console.log(Number(true))/*1*/
+```
+
+`parsenInt()函数转换规则`
+
+* parsenInt()函数在转换数值的时候，注重的是看是否复合数值模式，它会忽略字符串前面的空格，直至找到第一个非空字符串，如果第一个字符串不是数字或者正负号，就返回NaN；
+* 对空字符串，返回的是NaN,`Number函数对于空字符串返回的是0`
+
+```javascript
+console.log(parseInt("1234hello"));/*1234*/
+console.log(parseInt(""));/*NaN*/
+console.log(parseInt("0xA"));/*十六进制：10*/
+console.log(parseInt("22.5"));/*22*/
+console.log(parseInt("070"));/*八进制：70*/
+console.log(parseInt("70"));/*十进制：70*/
+console.log(parseInt("0xf"));/*十六进制：15*/
+```
+
