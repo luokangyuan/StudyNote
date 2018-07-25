@@ -296,3 +296,12 @@ console.log(num.toString(16));/*按照十六进制转换："a"*/
 ```
 
 > 注意：调用toString方法可以指定基数，转换成不同的字符串
+
+```javascript
+var value;
+console.log(String(10));/*"10"*/
+console.log(String(true));/*"true"*/
+console.log(String(null));/*"null"*/
+console.log(String(value));/*"undefined"*/
+```
+
