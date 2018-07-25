@@ -308,3 +308,8 @@ console.log(String(value));/*"undefined"*/
 ### Object类型
 
 在JavaScript中`对象是一组数据和功能的集合`，对象通过new的方式创建，例如`var u = new Object()`，Object类型是所有它的实例的基础，也就是说，Object具有的任何属性和方法也都存在与具体的对象中，和java中的Object对象一样，Object具有的属性和方法如下：
+
+* constructor：保存着用于创建当前对象的函数，构造函数constructor就是Object()；
+* hasOwnProperty（propertyName）：用于检查给定的属性在当前对象实例中是否存在；
+* isPrototypeOf(object)：用于检查传入的对象是否是当前对象的原型；
+* propertyIsEnumerable(propertyName)：用于检查给定的属性能否使用for-in语句来枚举；
