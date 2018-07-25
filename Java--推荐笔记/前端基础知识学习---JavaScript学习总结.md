@@ -211,3 +211,15 @@ console.log(isNaN("hello"));/*true*/
 			console.log(isNaN(true));/*false*/
 ```
 
+### 数值转换
+
+在JavaScript中有三个函数可以将非数值转换为数值类型，分别是：`Number()、parseInt()和parseFloat()`,其中Number()函数可以用于任何数据类型，而其他两个用于将字符串转换为数值，三个函数对于同样的输入却有不同的输出，具体的转换规则如下：
+
+`Number()函数的转换规则`
+
+* 如果是Boolean值，则true和false分别转换为1和0；
+* 如果是数字值，就只是简单的传入和返回；
+* 如果是NULL，返回的是0；
+* 如果是undefined，返回的是NAN；
+* 如果是字符串，具体转换如下：
+  * 
