@@ -251,3 +251,48 @@ console.log(parseInt("70"));/*十进制：70*/
 console.log(parseInt("0xf"));/*十六进制：15*/
 ```
 
+`parseFloat函数转换规则`
+
+* 从第一个字符开始解析，直到解析到字符串末尾结束，或者遇见一个无效的浮点数字字符位置；
+* 字符串中的第一个小数点是有效的，第二个小数点是无效的；
+* 如果字符串包含的是一个可解析为整数的数，则会返回整数；
+
+```javascript
+console.log(parseFloat("1234hello"));/*1234*/
+console.log(parseFloat("0xA"));/*0*/
+console.log(parseFloat("22.5"));/*22.5*/
+console.log(parseFloat("22.34.45"));/*22.34*/
+console.log(parseFloat("0986.6"));/*986.6*/
+console.log(parseFloat("3.144e7"));/*31440000*/
+```
+
+### String类型
+
+string类型用于表示由零个或者多个16位Unicode字符组成的字符串序列，就是字符串，在JavaScript中字符串可以使用单引号和双引号，但是不可混用。
+
+`转义字符`
+
+* `\n`：表示换行，`\t`：表示制表符，`\b`：表示退格，`\r`：表示回车
+* `\\`:表示斜杠，`\'`：表示单引号，`\"`：表示双引号
+
+> 说明：任何字符串可以通过length属性获取字符串的长度，例如：`text.length`
+
+`字符串的特点`
+
+在JavaScript中字符串是不可变的，换句话说，就是字符一旦创建，他的值就不能改变，要改变某一个变量的字符串，就要先销毁原来的字符串，在创建一个新的字符串值填充该变量。
+
+`转换为字符串`
+
+* 调用toString()方法；例如数值，布尔值，对象和字符串值都有toString方法；null和undefined没toString方法；
+* 使用String()转型函数，
+
+```javascript
+var num = 10;
+console.log(num.toString());/*"10"*/
+console.log(num.toString(2));/*按照二进制转换："1010"*/
+console.log(num.toString(8));/*按照八进制转换："12"*/
+console.log(num.toString(10));/*按照十进制转换："10"*/
+console.log(num.toString(16));/*按照十六进制转换："a"*/
+```
+
+> 注意：调用toString方法可以指定基数，转换成不同的字符串
