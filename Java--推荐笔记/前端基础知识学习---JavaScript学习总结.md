@@ -184,3 +184,15 @@ var floatN1 = 3.12e7;
 ```
 
 > 注意：使用浮点数值进行计算会产生误差的问题，所以和钱相关的就不要使用JavaScript计算了。
+
+`整数数值`
+
+由于内存的限制，JavaScript不可能保存最大的数值，所以就有了JavaScript中的最大值和最小值，如果超出这个值就会返回一个Infinity无穷大和-Infinity负无穷，如下
+
+```javascript
+console.log(Number.MIN_VALUE);/*5e-324*/
+console.log(Number.MAX_VALUE);/*1.7976931348623157e+308*/
+```
+
+### 非数值NAN
+
