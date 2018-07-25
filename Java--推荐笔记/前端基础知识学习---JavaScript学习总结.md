@@ -305,3 +305,6 @@ console.log(String(null));/*"null"*/
 console.log(String(value));/*"undefined"*/
 ```
 
+### Object类型
+
+在JavaScript中`对象是一组数据和功能的集合`，对象通过new的方式创建，例如`var u = new Object()`，Object类型是所有它的实例的基础，也就是说，Object具有的任何属性和方法也都存在与具体的对象中，和java中的Object对象一样，Object具有的属性和方法如下：
