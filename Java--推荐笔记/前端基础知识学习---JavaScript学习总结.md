@@ -200,3 +200,14 @@ NAN,是一个特殊的数值，表示一个本来应该返回数值的操作却�
 
 * 任何涉及到NAN的操作都会返回NAN,例如NAN/10;
 * 任何数值和NAN都不相等，包括NAN本身；
+
+在JavaScript中针对NAN的特殊性，定义了`isNaN()函数`，这个函数接受一个参数，该参数可以是任何类型，这个函数可以帮我们确定这个参数是否是`不是数值`，这个函数接收一个参数后，会尝试将这个参数转换为数值类型，不能被转换的就会返回false，否则返回true，如下：
+
+```javascript
+console.log(isNaN(NaN));/*true*/
+console.log(isNaN(10));/*false*/
+console.log(isNaN("10"));/*false*/
+console.log(isNaN("hello"));/*true*/
+			console.log(isNaN(true));/*false*/
+```
+
