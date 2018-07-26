@@ -17,7 +17,20 @@ jQuery核心函数就是`$或者jQuery`，它定义了这个全局的函数供�
 * `参数为DOM对象即$(div)`
 * `参数为html标签字符串即$("<div>")`
 
-
+```html
+<body>
+    <input type="text" name="userName" id="userName" />
+    <button id="search" value="搜索">搜索</button>
+    <script type="text/javascript" src="js/jquery-1.10.1.js" ></script>
+    <script type="text/javascript">
+        $(function(){/*绑定文档加载完成的监听*/
+            $('#search').click(function(){/*给按钮添加点击监听事件*/
+                var userName = $('#userName').val();/*获取DOM元素的值*/
+            })
+        })
+    </script>
+</body>
+```
 
 ### jQuery核心对象
 
