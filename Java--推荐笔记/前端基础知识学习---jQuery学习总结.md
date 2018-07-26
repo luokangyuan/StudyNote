@@ -32,6 +32,8 @@ jQuery核心函数就是`$或者jQuery`，它定义了这个全局的函数供�
 </body>
 ```
 
+> 说明：上述代码使用了jQuery核心函数：`$/jQuery`，使用了jQuery核心对象：执行`$()返回的对象`，`$('#search')`
+
 ### jQuery核心对象
 
 
