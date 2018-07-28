@@ -60,9 +60,24 @@ jQuery核心函数就是`$或者jQuery`，它定义了这个全局的函数供�
 </body>
 ```
 
+#### 作为对象使用
 
+作为对象使用的时候，时长用于发送AJAX请求或者遍历数组等，例如`$.ajax()，$.each()，$.get()`，实例如下：
+
+```javascript
+var arr = [2,3,4];
+/*$.each():隐式遍历数组 */
+$.each(arr,function(index,item){
+    console.log(index,item)
+})
+/*$.trim():去除两端空格*/
+var str = ' Hello Word '
+console.log($.trim(str));
+```
 
 ### jQuery核心对象
 
+即执行jQuery核心函数返回的对象，jQuery对象内部包含的是dom元素对象的伪数组(可能只有一个元素)，jQuery对象拥有很多有用的属性和方法, 让程序员能方便的操作dom
 
+#### 属性和方法
 
