@@ -15,7 +15,6 @@
   * JavaEE进阶知识学习-----SpringCloud学习总结
   * 前端基础知识学习---Vue.js学习总结
   * JavaEE基础知识学习-----Mysql学习总结
-
 * `2018年07月06日学习记录`
   * JavaEE日常工作经验总结系列（一）-----Java8优雅去重
   * JavaEE日常工作经验总结系列（二）-----代码规范
@@ -31,7 +30,6 @@
   * CentOS7安装Redis
   * CentOS7安装Tomcat
   * CentOS7安装防火墙
-
 * `2018年07月08日学习记录`
   * JavaEE进阶知识学习-----Java8新特性学习总结
   * JavaEE进阶知识学习-----PostgreSQL学习总结
@@ -51,7 +49,6 @@
   * JavaEE基础知识学习----集合之ArrayList
   * JavaEE基础知识学习----集合
   * JavaEE基础知识学习----观察者模式
-
 * `2018年07月09日学习记录`
   * JavaEE基础知识学习----抽象类和接口
   * JavaEE基础知识学习----多态
@@ -68,7 +65,6 @@
   * JavaEE基础知识学习----MyBatis（五）缓存机制
   * JavaEE基础知识学习----MyBatis（六）MBG逆向工程
   * JavaEE基础知识学习----MyBatis（七）插件开发
-
 * `2018年07月10日学习记录`
   * JavaEE基础知识学习---MySql数据库（一）数据库简介
   * JavaEE基础知识学习---MySql数据库（二）DQL语言
@@ -88,37 +84,30 @@
   * JavaEE进阶知识学习----Java8-1-Lambda表达式
   * JavaEE进阶知识学习----Java8-2-函数式接口
   * JavaEE进阶知识学习----Java8-3-方法引用和构造器引用
-
 * `2018年07月11日学习记录`
   * JavaEE进阶知识学习----Java8-4-1-StreamAPI
   * JavaEE进阶知识学习----Java8-4-2-StreamAPI
   * JavaEE进阶知识学习----Java8-6-时间API
-
 * `2018年07月12日学习记录`
   * CSS 3.0参考手册
   * JavaScript核心参考手册
   * jQuery1.7 中文手册
   * jQuery1.11.3 中文手册
   * W3School手册
-
 * `2018年07月14日学习记录`
   * 前端基础知识学习---CSS3总结（一）选择器
   * 前端基础知识学习---CSS3总结（二）新增UI方案
   * 前端基础知识学习---CSS3总结（三）渐变实例发廊灯
   * 前端基础知识学习---CSS3总结（四）渐变实例光斑动画
-
 * `2018年07月15日学习记录`
   * JavaEE进阶知识学习----JavaNIO-1-缓冲区-通道
   * JavaEE进阶知识学习----JavaNIO-2-分散读取和聚集写入-阻塞网络通信
   * JavaEE进阶知识学习----JavaNIO-3-非阻塞式-DatagramChannel
   * JavaEE进阶知识学习----JavaNIO-4-NIO2-File类
-
 * `2018年07月17日学习记录`
   * 前端基础知识学习---CSS3学习总结
-
 * `2018年07月19日学习记录`
   * 前端知识日常总结系列（三）-----CSS浮动理解
-
 * `2018年07月20日学习记录`
 
   * JavaEE进阶知识学习----Quartz-1-HelloWord
@@ -137,7 +126,6 @@
   * JavaEE进阶知识学习----SpringBoot-10-配置文件
   * JavaEE进阶知识学习----SpringBoot-11-日志框架
   * JavaEE进阶知识学习----SpringBoot-12-web
-
 * `2018年07月21日学习记录`
 
   * JavaEE进阶知识学习----SpringBoot高级（二）SpringBoot使用缓存
@@ -156,7 +144,6 @@
   * JavaEE进阶知识学习-----SpringCloud（四）Eureka集群配置
   * JavaEE进阶知识学习-----SpringCloud（五）Eureka和Zookeeper区别
   * JavaEE进阶知识学习-----SpringCloud（一）概述
-
 * `2018年07月22日学习记录`
 
   * CSS3脑图总结学习笔记
@@ -164,7 +151,8 @@
   * jQuery学习笔记
   * JavaScript学习笔记
   * Javascript高级学习笔记
+* `2018年07月31日学习记录`
+  * MybatisPlus学习笔记
 
-  
 
 
