@@ -6,16 +6,7 @@
 
 数据类型分为两类，基本(值)类型（`Number`: 任意数值，`String`: 任意文本，`Boolean`: true/false，`undefined`: undefined，`null`: null）和对象类型（`Object`: 一般对象类型，`Array`: 特别的对象类型(下标/内部数据有序)，`Function`: 特别的对象类型(可执行)）。
 
-数据类型的判别方法
-
-* 判断方法
-  * typeof:
-    * 可以区别: 数值, 字符串, 布尔值, undefined, function
-    * 不能区别: null与对象, 一般对象与数组
-  * instanceof
-    * 专门用来判断对象数据的类型: Object, Array与Function
-  * ===
-    * 可以判断: undefined和null
+数据类型的判别方法有`typeof`，`instanceof`和`===`，其中typeof可以区别: 数值, 字符串, 布尔值, undefined, function不能区别: null与对象, 一般对象与数组；instanceof专门用来判断对象数据的类型: Object, Array与Function；===可以判断: undefined和null；
 
 >   注意事项：
 
