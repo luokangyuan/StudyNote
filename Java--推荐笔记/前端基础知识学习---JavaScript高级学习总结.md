@@ -4,17 +4,10 @@
 
 ### 数据类型
 
-*   基本(值)类型
-    *   Number: 任意数值
-    *   String: 任意文本
-    *   Boolean: true/false
-    *   undefined: undefined
-    *   null: null
+数据类型分为两类，基本(值)类型（`Number`: 任意数值，`String`: 任意文本，`Boolean`: true/false，`undefined`: undefined，`null`: null）和对象类型（`Object`: 一般对象类型，`Array`: 特别的对象类型(下标/内部数据有序)，`Function`: 特别的对象类型(可执行)）。
 
-* 对象(引用)类型
-  * Object: 一般对象类型
-  * Array: 特别的对象类型(下标/内部数据有序)
-  * Function: 特别的对象类型(可执行)
+数据类型的判别方法
+
 * 判断方法
   * typeof:
     * 可以区别: 数值, 字符串, 布尔值, undefined, function
