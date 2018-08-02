@@ -1,3 +1,5 @@
+[TOC]
+
 # JavaScript高级学习笔记
 
 ## 基础总结
