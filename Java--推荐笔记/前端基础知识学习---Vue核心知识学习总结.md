@@ -1,19 +1,14 @@
+[TOC]
 
+# 一、Vue核心知识
 
-# Vue.js学习笔记
+## 1.1.Vue的基本简介
 
-> Vue.js的使用之HelloWord
+学习一门技术首先登陆其官网，[中文网址](https://cn.vuejs.org/)，[英文网址](https://vuejs.org/)，`vue`是一款渐进式JavaScript框架，作用是为了动态构建用户界面，该框架遵循MVVM模式，编码简洁，体积小，运行效率高；他借鉴了angular的`模板`和`数据绑定技术`，借鉴了react的`组件化`和`虚拟DOM技术`，当然，该技术也存在一个Vue全家桶，例如vue脚手架：`vue-cli`，ajax请求：`vue-resource`，路由：`vue-router`，状态管理：`vuex`，图片懒加载：`vue-lazyload`，移动端UI组件库：`min-ui`，PC端组件库：`element-ui`，页面滑动：`vue-scroller`等等插件；
 
-* 引入Vue.js
-* 创建Vue对象
-  * 其中el：指定根element（选择器）
-  * data：初始化数据（页面可以访问）
-* 双向数据绑定：v-model
-* 显示数据：{{xxx}}
+## 1.2.Vue的基本使用
 
-> 实例如下
-
-~~~javascript
+```html
 <div id="app">
     <input type="text" v-model="username">
     <p>Hello {{username}}</p>
@@ -28,96 +23,109 @@
         }
     })
 </script>
-~~~
+```
 
-> MVVM在Vue中体现如下
+`vue的HelloWord编码说明`
 
-model：模型，在Vue中就是数据对象（data）
+*   使用vue首先引入Vue.js，然后创建Vue对象，其中el表示指定的`根element选择器`，data是指初始化数据，双向数据绑定使用`v-model`，显示数据使用语法：`{{xxx}}`；
+*   vue的MVVM的体现就是：`model`代表模型，上述代码就是数据对象（data）,`view`代表视图，就是vue中的模板页面，`viewModel`代表是视图模型（vue实例）；
 
-view：视图，就是Vue中的模板页面
+## 1.3.模板语法
 
-viewModel：视图模型（Vue的实例）
+所谓的模板就是动态的Html页面，包含了一些JS语法代码，在Vue中使用`双大括号表达式`和`指令`（以v-开头的自定义标签属性）；
 
-## 模板语法
+`双大括号表达式`
 
-模板：动态的HTML页面，包含了一些JS语法代码，例如大括号表达式，指令（以v-开头的自定义标签）
+语法是：`{{xxx}}`，作用就是向页面输出数据，可以调用对象的方法，例如`{{msg.toUpperCase()}}`；
 
-> 双大括号表达式
+`指令：强制数据绑定`
 
-语法：{{xxx}}或者{{{exp}}},功能就是向页面输出数据，可以调用对象的方法，例如
-
-~~~javascript
-<body>
-    <div id="app">
-        <p>{{msg}}</p>
-        <p>{{msg.toUpperCase()}}</p>
-    </div>
-    <script type="text/javascript" src="../js/vue.js"></script>
-    <script>
-        new Vue({
-            el:'#app',
-            data:{
-                msg:'I Will Back'
-            }
-        })
-    </script>
-</body>
-~~~
-
-> 强制数据绑定指令
-
-数据强制绑定指令v-bind,使用如下 `<img v-bind:src="imgUrl">`，以`：`简写
-
-~~~javascript
+```html
 <body>
 <div id="app">
     <p>{{msg}}</p>
-    <p>{{msg.toUpperCase()}}</p>
-    <img:src="imgUrl">
+    <p>{{msg.toUpperCase()}}</p> 
+    <img src="imgSrc" alt="">
 </div>
-<script type="text/javascript" src="../js/vue.js"></script>
-<script>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
     new Vue({
-        el:'#app',
-        data:{
-            msg:'I Will Back',
-            imgUrl:"http://cn.vuejs.org/images/logo.png"
+        el: '#app',
+        data: {
+            msg: 'Hello Word',
+            imgSrc: 'http://image.luokangyuan.com/1.jpg'
         }
     })
 </script>
-~~~
+</body>
+```
 
-> 绑定事件监听指令
+上述代码中的img标签的src属性不会获取到data中定义的imgSrc属性的值，这个时候就需要使用指令强制数据绑定，功能就是`指定变化的属性值`，完整写法是：`v-bind:src='imgSrc'`，一般采用简洁写法：`:src='imgSrc'`；正确写法如下：
 
-绑定事件监听使用v-on指令` <button v-on:click="test">按钮</button>`，在实例中简写如下`@click`
+```html
+ <img :src="imgSrc" alt="">
+```
 
-~~~javascript
+`指令：绑定事件监听`
+
+```html
 <body>
 <div id="app">
-    <p>{{msg}}</p>
-    <p>{{msg.toUpperCase()}}</p>
-    <img :src="imgUrl">
-    <button @click="test">按钮</button>
-    <button @click="test2('发奋学习')">按钮</button>
- 	<button @click="test2(msg)">按钮</button>
+    <button v-on:click = 'test1'>test1</button>
+   	<button v-on:click = 'test2(msg)'>test2</button>
+    <button @click = 'test'>test</button>
 </div>
-<script type="text/javascript" src="../js/vue.js"></script>
-<script>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
     new Vue({
-        el:'#app',
-        data:{
-            msg:'I Will Back',
-            imgUrl:"http://cn.vuejs.org/images/logo.png"
+        el: '#app',
+        data: {
+            msg: 'Hello Word',
+            imgSrc: 'http://image.luokangyuan.com/1.jpg'
         },
-        methods:{
-            test(){
-                alert("Hello !!")
+        methods: {
+            test1() {
+                alert(123)
             },
-            test2(content){
+          	test2(content) {
                 alert(content)
+            },
+            test() {
+                alert(123)
             }
         }
     })
 </script>
 </body>
-~~~
+```
+
+绑定事件监听指令的作用就是绑定指定事件名的回调函数，完整写法：`v-on:click='xxx'`或者`v-on:click='xxx(参数)'`再或者`v-on:click.enter='xxx'`，简洁写法就是：`@click='xxx'`，使用`@`符号；
+
+## 1.4.计算属性和监视
+
+在computed属性对象中定义计算属性的方法，在页面中使用`{{方法名}}`来显示计算的结果；
+
+# 二、Vue组件化编码方式
+
+
+
+# 三、Vue请求方式vue-ajax
+
+
+
+# 四、Vue组件库
+
+
+
+# 五、Vue路由vue-router
+
+
+
+# 六、Vue状态管理vuex
+
+
+
+
+
+
+

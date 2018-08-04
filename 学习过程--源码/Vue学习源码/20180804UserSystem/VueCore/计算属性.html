@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02_模板语法</title>
+</head>
+<body>
+<div id="app">
+    <p>{{msg}}</p>
+    <p>{{msg.toUpperCase()}}</p> 
+    <img :src="imgSrc" alt="">
+    <button v-on:click = 'test1'>test1</button>
+    <button v-on:click = 'test2(msg)'>test2</button>
+    <button @click = 'test'>test</button>
+</div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            msg: 'Hello Word',
+            imgSrc: 'http://image.luokangyuan.com/1.jpg'
+        },
+        methods: {
+            test1() {
+                alert(123)
+            },
+            test2(content) {
+                alert(content)
+            },
+            test() {
+                alert(123)
+            }
+        }
+    })
+</script>
+</body>
+</html>
