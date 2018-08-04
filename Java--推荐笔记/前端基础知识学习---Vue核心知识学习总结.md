@@ -268,6 +268,29 @@
 
 ## 1.6.条件渲染
 
+在vue中条件渲染使用`v-if`、`v-else`和`v-show`指令，二者不同的地方在于`v-if`是不会生成不应该显示的元素，`v-show`是通过css控制隐藏不应该显示的节点元素，是在页面生成的，当需要频繁的切换时，使用`v-show`比较好，当条件不成立时，`v-is`的所有子节点也不会被解析；
+
+```html
+<body>
+<div id="app">
+    <p v-if = 'ok'>显示成功</p>
+    <p v-else>显示失败</p>
+    <p v-show = 'ok'>显示成功-v-show</p>
+    <p v-show = '!ok'>显示失败-v-show</p>
+    <button @click='ok=!ok'>切换</button>
+</div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            ok: false
+        }
+    })
+</script>
+</body>
+```
+
 
 
 # 二、Vue组件化编码方式
