@@ -103,7 +103,45 @@
 
 ## 1.4.计算属性和监视
 
+`计算属性`
+
 在computed属性对象中定义计算属性的方法，在页面中使用`{{方法名}}`来显示计算的结果；
+
+```html
+<body>
+<div id="app">
+    姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
+    名：<input type="text" placeholder="名字" v-model="lastName"><br>
+    姓名1（单向）：<input type="text" placeholder="姓名1" v-model="fullName1"><br>
+    姓名2（单向）：<input type="text" placeholder="姓名2"><br>
+    姓名3（双向）<input type="text" placeholder="姓名3双向">
+
+</div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            firstName: 'A',
+            lastName: 'B'
+            //如果将 fullName1写在这个地方，那么改变firstName和lastName的值并不会同时改变fullName1的值
+            // 所以需要使用到计算属性，将fullName1写入computed属性对象中，将方法的返回值作为输出值
+            // fullName1：'A B' 
+        },
+        computed: {
+            // 这个f方法在初始化会执行，当相关属性发生改变时也会执行
+            fullName1() { // 计算属性中的一个方法，方法的返回值作为属性值
+                return this.firstName + ' ' + this.lastName
+            }
+        }
+    })
+</script>
+</body>
+```
+
+`监视`
+
+
 
 # 二、Vue组件化编码方式
 
