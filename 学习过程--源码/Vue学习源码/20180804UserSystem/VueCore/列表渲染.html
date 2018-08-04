@@ -6,14 +6,42 @@
 </head>
 <body>
 <div id="app">
-   
+    <h2>v-for遍历数组</h2>
+   <ui>
+       <li v-for="(u,index) in users" ::key="index">
+           {{index}}===={{u.name}}===={{u.age}}==
+           <button @click='deleteUser(index)'>删除</button>==<button @click="updateUser(index,{name: '王八',age: 45})">更新</button>
+       </li>
+   </ui>
+   <h2>v-for遍历对象</h2>
+   <ul>
+       <li v-for="(value,key) in users[1]" :key="key">
+           {{value}}==={{key}}
+       </li>
+   </ul>
 </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
         el: '#app',
         data: {
-            ok: false
+            users: [ // vue本身只是监视了users的改变，没有监视数组内部数据的改变
+                {name: '张三',age: 23},
+                {name: '李四',age: 56},
+                {name: '王五',age: 76},
+                {name: '赵六',age: 87},
+                {name: '陈七',age: 34}
+            ]
+        },
+        methods: {
+            deleteUser(index){
+                this.users.splice(index,1);
+            },
+            updateUser(index,value){
+                // 如果只写 this.users[index] = value这一条语句，只改变了数组内部的数据，如果不调用vue的变异方法，就不会更新页面
+                // vue重写了数组中的一系列方法，重写后就是改变数组操作，然后重新渲染页面，也就是实现的数据绑定
+                this.users.splice(index,1,value) ;
+            }
         }
     })
 </script>

@@ -291,6 +291,114 @@
 </body>
 ```
 
+## 1.7.列表渲染
+
+列表的渲染使用的是`v-for`指令，可以渲染数组和对象，注意的是遍历的时候指定唯一的index或者key，另外在做数组的删除和更新操作时使用数组的`变异方法`，有关vue的数组变异方法可以参考官方API；
+
+```html
+<body>
+<div id="app">
+    <h2>v-for遍历数组</h2>
+   <ui>
+       <li v-for="(u,index) in users" ::key="index">
+           {{index}}===={{u.name}}===={{u.age}}==
+           <button @click='deleteUser(index)'>删除</button>==<button @click="updateUser(index,{name: '王八',age: 45})">更新</button>
+       </li>
+   </ui>
+   <h2>v-for遍历对象</h2>
+   <ul>
+       <li v-for="(value,key) in users[1]" :key="key">
+           {{value}}==={{key}}
+       </li>
+   </ul>
+</div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            users: [ // vue本身只是监视了users的改变，没有监视数组内部数据的改变
+                {name: '张三',age: 23},
+                {name: '李四',age: 56},
+                {name: '王五',age: 76},
+                {name: '赵六',age: 87},
+                {name: '陈七',age: 34}
+            ]
+        },
+        methods: {
+            deleteUser(index){
+                this.users.splice(index,1);
+            },
+            updateUser(index,value){
+                // 如果只写 this.users[index] = value这一条语句，只改变了数组内部的数据，如果不调用vue的变异方法，就不会更新页面
+                // vue重写了数组中的一系列方法，重写后就是改变数组操作，然后重新渲染页面，也就是实现的数据绑定
+                this.users.splice(index,1,value) ;
+            }
+        }
+    })
+</script>
+</body>
+```
+
+`列表渲染-列表过滤和排序`
+
+```html
+<body>
+<div id="app">
+  <input type="text" v-model="searchName">
+   <ui>
+       <li v-for="(u,index) in filterUsers" ::key="index">
+           {{index}}===={{u.name}}===={{u.age}}
+       </li>
+   </ui>
+   <button @click="setOrderType(1)" >年龄升序</button>
+   <button @click="setOrderType(2)">年龄降序</button>
+   <button @click="setOrderType(0)">原本排序</button>
+</div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            searchName: '',
+            orderType: 0, // 0代表原本，1代表升序，2代表降序
+            users: [ // vue本身只是监视了users的改变，没有监视数组内部数据的改变
+                {name: '张三',age: 23},
+                {name: '李四',age: 56},
+                {name: '张五',age: 76},
+                {name: '赵六',age: 87},
+                {name: '陈七',age: 34}
+            ]
+        },
+        computed: {
+            filterUsers() {
+                const {searchName,users,orderType} = this;// 取到相关数据（searchName和users）
+                let fusers; // 定义最终返回的数组
+                fusers = users.filter(u => u.name.indexOf(searchName) !==-1);// 对users进行过滤
+                // 对fusers排序
+                if(orderType !== 0){
+                    fusers.sort(function(u1,u2){ // 如果返回负数p1在前，返回正数p2在前
+                        // 1.代表升序,2.代表降序
+                        if(orderType == 2){
+                            return u2.age - u1.age
+                        }else{
+                            return u1.age -u2.age
+                        }
+                    })
+                }
+                return fusers;
+            }
+        },
+        methods: {
+            setOrderType(value){
+                this.orderType = value;
+            }
+        }
+    })
+</script>
+</body>
+```
+
 
 
 # 二、Vue组件化编码方式

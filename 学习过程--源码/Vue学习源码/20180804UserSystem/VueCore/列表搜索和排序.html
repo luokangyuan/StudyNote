@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>列表渲染</title>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="searchName">
+   <ui>
+       <li v-for="(u,index) in filterUsers" ::key="index">
+           {{index}}===={{u.name}}===={{u.age}}
+       </li>
+   </ui>
+   <button @click="setOrderType(1)" >年龄升序</button>
+   <button @click="setOrderType(2)">年龄降序</button>
+   <button @click="setOrderType(0)">原本排序</button>
+</div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            searchName: '',
+            orderType: 0, // 0代表原本，1代表升序，2代表降序
+            users: [ // vue本身只是监视了users的改变，没有监视数组内部数据的改变
+                {name: '张三',age: 23},
+                {name: '李四',age: 56},
+                {name: '张五',age: 76},
+                {name: '赵六',age: 87},
+                {name: '陈七',age: 34}
+            ]
+        },
+        computed: {
+            filterUsers() {
+                const {searchName,users,orderType} = this;// 取到相关数据（searchName和users）
+                let fusers; // 定义最终返回的数组
+                fusers = users.filter(u => u.name.indexOf(searchName) !==-1);// 对users进行过滤
+                // 对fusers排序
+                if(orderType !== 0){
+                    fusers.sort(function(u1,u2){ // 如果返回负数p1在前，返回正数p2在前
+                        // 1.代表升序,2.代表降序
+                        if(orderType == 2){
+                            return u2.age - u1.age
+                        }else{
+                            return u1.age -u2.age
+                        }
+                    })
+                }
+                return fusers;
+            }
+        },
+        methods: {
+            setOrderType(value){
+                this.orderType = value;
+            }
+        }
+    })
+</script>
+</body>
+</html>
