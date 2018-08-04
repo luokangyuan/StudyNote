@@ -8,28 +8,29 @@
 <div id="app">
     姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
     名：<input type="text" placeholder="名字" v-model="lastName"><br>
-    姓名1（单向）：<input type="text" placeholder="姓名1" v-model="fullName1"><br>
-    姓名2（单向）：<input type="text" placeholder="姓名2"><br>
+    姓名2（单向）：<input type="text" placeholder="姓名2" v-model="fullName2"><br>
     姓名3（双向）<input type="text" placeholder="姓名3双向">
 
 </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
-    new Vue({
+   var vm =  new Vue({
         el: '#app',
         data: {
             firstName: 'A',
-            lastName: 'B'
-            //如果将 fullName1写在这个地方，那么改变firstName和lastName的值并不会同时改变fullName1的值
-            // 所以需要使用到计算属性，将fullName1写入computed属性对象中，将方法的返回值作为输出值
-            // fullName1：'A B' 
+            lastName: 'B',
+            fullName2: 'A B'
         },
-        computed: {
-            // 这个f方法在初始化会执行，当相关属性发生改变时也会执行
-            fullName1() { // 计算属性中的一个方法，方法的返回值作为属性值
-                return this.firstName + ' ' + this.lastName
+        watch: {
+            // 这个方法就是监视firstName，值发生改变是被调用执行函数
+            // 函数可以传入两个参数代表新值和改变之前的值，也可以传一个，也可以不传
+            firstName: function(value){ 
+                this.fullName2 = value+ ' ' + this.lastName
             }
         }
+    })
+    vm.$watch('lastName',function(value){
+        this.fullName2 = this.firstName + ' ' + value
     })
 </script>
 </body>

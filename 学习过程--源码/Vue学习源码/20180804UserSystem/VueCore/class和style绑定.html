@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>class和style绑定</title>
+  <style>
+      .aClass{color: red}
+      .bClass{color: blue}
+  </style>
+</head>
+<body>
+<div id="app">
+    <h1>class绑定</h1>
+    <p :class="a">我是字符串</p>
+    <p :class="{aClass: isA,bClass: isB}">我是对象</p> <!--class绑定的是对象。当为true才会留下-->
+    <h1>style绑定</h1>
+    <p :style="{color: activeColor, fontSize: fontSize+'px'}">我是style强制绑定</p>
+    <button @click='update'>更新</button>
+</div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+       data: {
+        a: 'aClass',
+        isA: true,
+        isB: false ,// 以上是绑定class
+        activeColor: 'red', // 以下是绑定style
+        fontSize : 20
+       },
+       methods: {
+        update(){
+            this.a = 'bClass';
+            this.isA = false;
+            this.isB = true;// 以上是绑定class
+            this.activeColor = 'blue';
+            this.fontSize = 30;
+        }
+       }
+    })
+</script>
+</body>
+</html>
