@@ -583,6 +583,82 @@
 
 在vue中动画就是操作css的trasition或者animation属性，vue会给目标元素添加和移除指定的class，只不过要遵循一定的命名规则，
 
+```html
+ <title>动画和过渡</title>
+    <style type="text/css">
+        /* 指定显示和隐藏的过渡效果 */
+
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 1s;
+        }
+
+        /* 指定隐藏的样式 */
+
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+
+        /* 指定显示的过滤效果 */
+
+        .move-enter-active {
+            transition: all 1s
+        }
+
+        /* 指定隐藏的过滤效果 */
+
+        .move-leave-active {
+            transition: all 3s
+        }
+
+        /* 指定隐藏的样式 */
+
+        .move-enter,
+        .move-leave-to {
+            opacity: 0;
+            transform: translateX(20px)
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="isshow = !isshow">动画按钮</button>
+        <transition name="fade">
+            <p v-show="isshow">四川码酱</p>
+        </transition>
+    </div>
+    <div id="app1">
+        <button @click="isshow = !isshow">多属性动画按钮</button>
+        <transition name="move">
+            <p v-show="isshow">四川码酱</p>
+        </transition>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    isshow: true
+                }
+            }
+        })
+        new Vue({
+            el: "#app1",
+            data() {
+                return {
+                    isshow: true
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+
+
 # 二、Vue组件化编码方式
 
 
