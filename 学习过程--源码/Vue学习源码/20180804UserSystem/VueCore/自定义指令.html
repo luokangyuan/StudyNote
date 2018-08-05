@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>自定义指令</title>
+</head>
+
+<body>
+    <div id="app">
+        <p v-upper-text="msg"></p>
+        <p v-lower-text="msg"></p>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+         // 定义全局指令
+         // el：指令属性所在的标签属性
+         // binding：包含指令相关信息数据的对象
+        Vue.directive('upper-text', function(el,binding){
+            el.textContent = binding.value.toUpperCase()
+            console.log(el,binding)
+        })
+        new Vue({
+            el: "#app",
+            data: {
+                msg: "This is my think life"
+            },
+            directives: { // 使用自定义局部指令
+                'lower-text' : function(el,binding){
+                    el.textContent = binding.value.toLowerCase()
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

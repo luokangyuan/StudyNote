@@ -692,14 +692,14 @@
 *   v:text : 更新元素的 textContent
 *   v-html : 更新元素的 innerHTML
 *   v-if : 如果为 true, 当前标签才会输出到页面
-*    v-else: 如果为 false, 当前标签才会输出到页面
+*   v-else: 如果为 false, 当前标签才会输出到页面
 *   v-show : 通过控制 display 样式来控制显示/隐藏
 *   v-for : 遍历数组/对象
 *   v-on : 绑定事件监听, 一般简写为@
-*    v-bind : 强制绑定解析表达式, 可以省略 v-bind
+*   v-bind : 强制绑定解析表达式, 可以省略 v-bind
 *   v-model : 双向数据绑定
 *   ref : 指定唯一标识, vue 对象通过$els 属性访问这个元素对象
-*    v-cloak : 防止闪现出现`{{xxx}}`, 与 css 配合: [v-cloak] { display: none }
+*   v-cloak : 防止闪现出现`{{xxx}}`, 与 css 配合: [v-cloak] { display: none }
 
 ```html
 <title>内置指令</title>
@@ -734,6 +734,60 @@
 ```
 
 >   说明： `v-cloak`指令是为了页面加载数据缓慢时候显示`{{xxx}}`标签而出了一个指令，与CSS搭配使用
+
+`自定义指令`
+
+注册全局指令，方法如下：
+
+```javascript
+Vue.directive('my-directive', function(el, binding){
+	el.innerHTML = binding.value.toupperCase()
+})
+```
+
+注册局部指令，方法如下：
+
+```javascript
+directives : {
+  'my-directive' : {
+  bind (el, binding) {
+    el.innerHTML = binding.value.toupperCase()
+    }
+  }
+}
+```
+
+```html
+<body>
+    <div id="app">
+        <p v-upper-text="msg"></p>
+        <p v-lower-text="msg"></p>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+         // 定义全局指令
+         // el：指令属性所在的标签属性
+         // binding：包含指令相关信息数据的对象
+        Vue.directive('upper-text', function(el,binding){
+            el.textContent = binding.value.toUpperCase()
+            console.log(el,binding)
+        })
+        new Vue({
+            el: "#app",
+            data: {
+                msg: "This is my think life"
+            },
+            directives: { // 使用自定义局部指令
+                'lower-text' : function(el,binding){
+                    el.textContent = binding.value.toLowerCase()
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+
 
 # 二、Vue组件化编码方式
 
