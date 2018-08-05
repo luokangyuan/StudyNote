@@ -804,6 +804,36 @@ directives : {
 
 # 二、Vue组件化编码方式
 
+## 2.1.使用vue-cli创建模板项目
+
+vue-cli是vue官方提供的脚手架工具，首先确认安装了node和npm，最好安装一个cnpm，使用方法如下：
+
+*   npm install -g vue-cli
+*   vue init webpack vue_demo 其中 vue_demo是项目名
+*   cd vue_demo
+*   npm install或者npm run dev
+
+`项目结构说明`
+
+*   build : webpack 相关的配置文件夹(基本不需要修改)
+    *    dev-server.js : 通过 express 启动后台服务器
+*   config: webpack 相关的配置文件夹(基本不需要修改)
+    *   index.js: 指定的后台服务的端口号和静态资源文件夹
+*   src : 源码文件夹
+    *   components: vue 组件及其相关资源文件夹
+    *   App.vue: 应用根主组件
+    *   main.js: 应用入口 js
+*    static: 静态资源文件夹
+*   .babelrc: babel 的配置文件
+*   .eslintignore: eslint 检查忽略的配置
+*   .eslintrc.js: eslint 检查的配置
+*   .gitignore: git 版本管制忽略的配置
+*   index.html: 主页面文件
+*    package.json: 应用包配置文件
+*    README.md: 应用描述说明的 readme 文件
+
+## 2.2.项目打包发布方式
+
 
 
 # 三、Vue请求方式vue-ajax
