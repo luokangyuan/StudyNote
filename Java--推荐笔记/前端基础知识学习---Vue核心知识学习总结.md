@@ -657,7 +657,83 @@
 </body>
 ```
 
+## 1.12.过滤器
 
+在vue中允许自定义过滤器，所谓过滤器就是：`对要显示的数据进行特定格式化后在显示，例如时间格式化等`，注意的是：`并没有改变原本的数据，只是产生新的对应数据`；
+
+```html
+<body>
+    <div id="app">
+      <p>当前完整时间为：{{data | dateString}}</p>
+      <p>当前日期为：{{data | dateString('YYYY-MM-DD')}}</p>
+      <p>当前时间为：{{data | dateString('HH:mm:ss')}}</p>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/moment.js/2.22.1/moment.js"></script>
+    <script type="text/javascript">
+    // 自定义过滤器
+        Vue.filter('dateString',function(value,format){
+            return moment(value).format(format || 'YYYY-MM-DD HH:mm:ss')
+        })
+        new Vue({
+            el: "#app",
+            data: {
+                data: new Date()
+            }
+        })
+    </script>
+</body>
+```
+
+## 1.13.内置指令和自定义指令
+
+`常用的内置指令`
+
+*   v:text : 更新元素的 textContent
+*   v-html : 更新元素的 innerHTML
+*   v-if : 如果为 true, 当前标签才会输出到页面
+*    v-else: 如果为 false, 当前标签才会输出到页面
+*   v-show : 通过控制 display 样式来控制显示/隐藏
+*   v-for : 遍历数组/对象
+*   v-on : 绑定事件监听, 一般简写为@
+*    v-bind : 强制绑定解析表达式, 可以省略 v-bind
+*   v-model : 双向数据绑定
+*   ref : 指定唯一标识, vue 对象通过$els 属性访问这个元素对象
+*    v-cloak : 防止闪现出现`{{xxx}}`, 与 css 配合: [v-cloak] { display: none }
+
+```html
+<title>内置指令</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p ref="content">四川码酱</p>
+        <button @click = "hint">提示</button>
+        <p v-cloak>{{msg}}</p>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data: {
+                msg: "Hello 四川码酱"
+            },
+            methods: {
+                hint(){
+                    alert(this.$refs.content.textContent);
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+>   说明： `v-cloak`指令是为了页面加载数据缓慢时候显示`{{xxx}}`标签而出了一个指令，与CSS搭配使用
 
 # 二、Vue组件化编码方式
 
