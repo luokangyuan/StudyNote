@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表单数据绑定</title>
+</head>
+
+<body>
+    <div id="app">
+        <form action="/xxx" @submit.prevent="handSubmit">
+            <span>用户名：</span>
+            <input type="text" v-model="userName">
+            <br>
+            <span>密码：</span>
+            <input type="password" v-model="pwd">
+            <br>
+            <span>性别：</span>
+            <input type="radio" id="wman" value="女" v-model = "sex">
+            <label for="wman">女</label>
+            <input type="radio" id="man" value="男" v-model = "sex">
+            <label for="man">男</label>
+            <br>
+            <span>爱好：</span>
+            <input type="checkbox" id="basket" value="basket" v-model = "likes">
+            <label for="basket">篮球</label>
+            <input type="checkbox" id="footbal" value ="foot"  v-model = "likes">
+            <label for="footbal">足球</label>
+            <input type="checkbox" id="pingpang" value="pingpang"  v-model = "likes">
+            <label for="pingpang">乒乓球</label>
+            <br>
+            <span>城市：</span>
+            <select name="" id="" v-model="cityId">
+                <option value="">未选择</option>
+                <option :value="city.id" v-for="(city,index) in allCitys" :key="index">{{city.name}}</option>
+            </select>
+            <br>
+            <span>个人介绍：</span>
+            <textarea name="" id="" cols="30" rows="10" v-model="desc"></textarea>
+            <br>
+            <input type="submit" value="注册">
+        </form>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data: {
+                userName: '',
+                pwd: '',
+                sex: '男', // 默认选中性别男
+                likes: ['foot'], // 默认选中foot对应的多选框
+                allCitys: [{id: 1,name: "北京"}, {id: 2,name: "成都"},{id: 3,name: "上海"},{id: 4,name: "宁波"}],
+                cityId: '',// 这里默认是空，则匹配未选择，如果默认选中成都，则写2即可
+                desc: ''
+            },
+            methods: {
+                handSubmit(){
+                    console.log(this.userName,this.pwd,this.sex,this.likes,this.cityId,this.desc)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

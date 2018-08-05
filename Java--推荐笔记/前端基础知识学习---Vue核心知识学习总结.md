@@ -42,11 +42,11 @@
 
 ```html
 <body>
-<div id="app">
-    <p>{{msg}}</p>
-    <p>{{msg.toUpperCase()}}</p> 
-    <img src="imgSrc" alt="">
-</div>
+  <div id="app">
+      <p>{{msg}}</p>
+      <p>{{msg.toUpperCase()}}</p> 
+      <img src="imgSrc" alt="">
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -70,11 +70,11 @@
 
 ```html
 <body>
-<div id="app">
-    <button v-on:click = 'test1'>test1</button>
-   	<button v-on:click = 'test2(msg)'>test2</button>
-    <button @click = 'test'>test</button>
-</div>
+  <div id="app">
+      <button v-on:click = 'test1'>test1</button>
+      <button v-on:click = 'test2(msg)'>test2</button>
+      <button @click = 'test'>test</button>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -109,14 +109,14 @@
 
 ```html
 <body>
-<div id="app">
-    姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
-    名：<input type="text" placeholder="名字" v-model="lastName"><br>
-    姓名1（单向）：<input type="text" placeholder="姓名1" v-model="fullName1"><br>
-    姓名2（单向）：<input type="text" placeholder="姓名2"><br>
-    姓名3（双向）<input type="text" placeholder="姓名3双向">
+  <div id="app">
+      姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
+      名：<input type="text" placeholder="名字" v-model="lastName"><br>
+      姓名1（单向）：<input type="text" placeholder="姓名1" v-model="fullName1"><br>
+      姓名2（单向）：<input type="text" placeholder="姓名2"><br>
+      姓名3（双向）<input type="text" placeholder="姓名3双向">
 
-</div>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -145,12 +145,12 @@
 
 ```html
 <body>
-<div id="app">
-    姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
-    名：<input type="text" placeholder="名字" v-model="lastName"><br>
-    姓名3（双向）<input type="text" placeholder="姓名3双向" v-model="fullName3">
+  <div id="app">
+      姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
+      名：<input type="text" placeholder="名字" v-model="lastName"><br>
+      姓名3（双向）<input type="text" placeholder="姓名3双向" v-model="fullName3">
 
-</div>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -188,13 +188,13 @@
 
 ```html
 <body>
-<div id="app">
-    姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
-    名：<input type="text" placeholder="名字" v-model="lastName"><br>
-    姓名2（单向）：<input type="text" placeholder="姓名2" v-model="fullName2"><br>
-    姓名3（双向）<input type="text" placeholder="姓名3双向">
+  <div id="app">
+      姓：<input type="text" placeholder="姓氏"  v-model="firstName"><br>
+      名：<input type="text" placeholder="名字" v-model="lastName"><br>
+      姓名2（单向）：<input type="text" placeholder="姓名2" v-model="fullName2"><br>
+      姓名3（双向）<input type="text" placeholder="姓名3双向">
 
-</div>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
    var vm =  new Vue({
@@ -233,14 +233,14 @@
   </style>
 </head>
 <body>
-<div id="app">
-    <h1>class绑定</h1>
-    <p :class="a">我是字符串</p>
-    <p :class="{aClass: isA,bClass: isB}">我是对象</p> <!--class绑定的是对象。当为true才会留下-->
-    <h1>style绑定</h1>
-    <p :style="{color: activeColor, fontSize: fontSize+'px'}">我是style强制绑定</p>
-    <button @click='update'>更新</button>
-</div>
+  <div id="app">
+      <h1>class绑定</h1>
+      <p :class="a">我是字符串</p>
+      <p :class="{aClass: isA,bClass: isB}">我是对象</p> <!--class绑定的是对象。当为true才会留下-->
+      <h1>style绑定</h1>
+      <p :style="{color: activeColor, fontSize: fontSize+'px'}">我是style强制绑定</p>
+      <button @click='update'>更新</button>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -272,13 +272,13 @@
 
 ```html
 <body>
-<div id="app">
-    <p v-if = 'ok'>显示成功</p>
-    <p v-else>显示失败</p>
-    <p v-show = 'ok'>显示成功-v-show</p>
-    <p v-show = '!ok'>显示失败-v-show</p>
-    <button @click='ok=!ok'>切换</button>
-</div>
+  <div id="app">
+      <p v-if = 'ok'>显示成功</p>
+      <p v-else>显示失败</p>
+      <p v-show = 'ok'>显示成功-v-show</p>
+      <p v-show = '!ok'>显示失败-v-show</p>
+      <button @click='ok=!ok'>切换</button>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -297,21 +297,21 @@
 
 ```html
 <body>
-<div id="app">
-    <h2>v-for遍历数组</h2>
-   <ui>
-       <li v-for="(u,index) in users" ::key="index">
-           {{index}}===={{u.name}}===={{u.age}}==
-           <button @click='deleteUser(index)'>删除</button>==<button @click="updateUser(index,{name: '王八',age: 45})">更新</button>
-       </li>
-   </ui>
-   <h2>v-for遍历对象</h2>
-   <ul>
-       <li v-for="(value,key) in users[1]" :key="key">
-           {{value}}==={{key}}
-       </li>
-   </ul>
-</div>
+  <div id="app">
+      <h2>v-for遍历数组</h2>
+     <ui>
+         <li v-for="(u,index) in users" ::key="index">
+             {{index}}===={{u.name}}===={{u.age}}==
+             <button @click='deleteUser(index)'>删除</button>==<button @click="updateUser(index,{name: '王八',age: 45})">更新</button>
+         </li>
+     </ui>
+     <h2>v-for遍历对象</h2>
+     <ul>
+         <li v-for="(value,key) in users[1]" :key="key">
+             {{value}}==={{key}}
+         </li>
+     </ul>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -344,17 +344,17 @@
 
 ```html
 <body>
-<div id="app">
-  <input type="text" v-model="searchName">
-   <ui>
-       <li v-for="(u,index) in filterUsers" ::key="index">
-           {{index}}===={{u.name}}===={{u.age}}
-       </li>
-   </ui>
-   <button @click="setOrderType(1)" >年龄升序</button>
-   <button @click="setOrderType(2)">年龄降序</button>
-   <button @click="setOrderType(0)">原本排序</button>
-</div>
+  <div id="app">
+    <input type="text" v-model="searchName">
+     <ui>
+         <li v-for="(u,index) in filterUsers" ::key="index">
+             {{index}}===={{u.name}}===={{u.age}}
+         </li>
+     </ui>
+     <button @click="setOrderType(1)" >年龄升序</button>
+     <button @click="setOrderType(2)">年龄降序</button>
+     <button @click="setOrderType(0)">原本排序</button>
+  </div>
 <script src="js/vue.js" type="text/javascript"></script>
 <script type="text/javascript">
     new Vue({
@@ -400,6 +400,125 @@
 ```
 
 ## 1.8.事件处理
+
+在vue中绑定监听使用`@xxx='fun'`,其中点击函数和传参数和不传参数，默认事件的形参是`event`,当需要传参的同时需要默认event时候，使用隐含属性对象`@xxx = fun(123,$event)`；事件有两个修饰符：`.prevent`：阻止事件的默认事件的默认行为和`.stop`：停止事件冒泡；按键修饰符使用`keyup.keyCode = fun()`：keycode是键盘输入对应的ketcode值，可以使用名称，但是存在一部风没有；
+
+```html
+<body>
+  <div id="app">
+      <h2>绑定监听</h2>
+     <button @click="test1" >我是按钮一</button>
+     <button @click="test2('Hello 码酱')">我是按钮二，我想获取自己传入的值</button>
+     <button @click="test3">我是按钮三，我就想获取自己</button>
+     <button @click="test4('Hello',$event)">我是按钮四，我想获取获取自己的同时获取传入的值</button>
+     <h2>事件修饰符：事件冒泡和事件默认行为</h2>
+     <div style="width: 200px; height: 200px; background: red" @click="test5">
+         <!-- 使用 @click.stop阻止事件的冒泡-->
+          <div style="width: 100px; height: 100px; background: blue" @click.stop="test6"></div>
+     </div>
+     <!-- 使用@click.prevent阻止事件的默认行为 -->
+     <a href="luokangyuan.com" @click.prevent="test7">去码酱博客</a>
+     <h2>按键修饰符：使用@keyup.13，其中的数字代表键盘每一个输入对应的keycode</h2>
+     <input type="text" @keyup.13="test8">
+     <input type="text" @keyup.enter="test8">
+  </div>
+<script src="js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        methods: {
+            test1(){
+                alert("四川码酱");
+            },
+            test2(msg){
+                alert(msg);
+            },
+            test3(event){
+                alert(event.target.innerHTML);
+            },
+            test4(msg,event){
+                alert(msg+"==="+event.target.innerHTML);
+            },
+            test5(){
+                alert("执行了外面的div的点击事件");
+            },
+            test6(){
+                alert("执行了里面的div的点击事件");
+            },
+            test7(){
+                alert("不去码酱博客")
+            },
+            test8(event){
+                alert(event.target.value);
+            }
+        }
+    })
+</script>
+</body>
+```
+
+## 1.9.表单输入绑定
+
+表单的数据绑定使用`v-model`指令，具体相关编码如下：
+
+```html
+<body>
+    <div id="app">
+        <form action="/xxx" @submit.prevent="handSubmit">
+            <span>用户名：</span>
+            <input type="text" v-model="userName">
+            <br>
+            <span>密码：</span>
+            <input type="password" v-model="pwd">
+            <br>
+            <span>性别：</span>
+            <input type="radio" id="wman" value="女" v-model="sex">
+            <label for="wman">女</label>
+            <input type="radio" id="man" value="男" v-model="sex">
+            <label for="man">男</label>
+            <br>
+            <span>爱好：</span>
+            <input type="checkbox" id="basket" value="basket" v-model="likes">
+            <label for="basket">篮球</label>
+            <input type="checkbox" id="footbal" value="foot" v-model="likes">
+            <label for="footbal">足球</label>
+            <input type="checkbox" id="pingpang" value="pingpang" v-model="likes">
+            <label for="pingpang">乒乓球</label>
+            <br>
+            <span>城市：</span>
+            <select name="" id="" v-model="cityId">
+                <option value="">未选择</option>
+                <option :value="city.id" v-for="(city,index) in allCitys" :key="index">{{city.name}}</option>
+            </select>
+            <br>
+            <span>个人介绍：</span>
+            <textarea name="" id="" cols="30" rows="10" v-model="desc"></textarea>
+            <br>
+            <input type="submit" value="注册">
+        </form>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data: {
+                userName: '',
+                pwd: '',
+                sex: '男', // 默认选中性别男
+                likes: ['foot'], // 默认选中foot对应的多选框
+                allCitys: [{ id: 1, name: "北京" }, { id: 2, name: "成都" }, { id: 3, name: "上海" }, { id: 4, name: "宁波" }],
+                cityId: '',// 这里默认是空，则匹配未选择，如果默认选中成都，则写2即可
+                desc: ''
+            },
+            methods: {
+                handSubmit() {
+                    console.log(this.userName, this.pwd, this.sex, this.likes, this.cityId, this.desc)
+                }
+            }
+        })
+    </script>
+</body>
+```
 
 
 
