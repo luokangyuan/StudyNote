@@ -787,7 +787,20 @@ directives : {
 </body>
 ```
 
+## 1.14.核心知识总结
 
+*   Vue是前端开发库，用于构建用户界面，遵循MVVM模式，编码简洁，体积小，效率高，包含了一些列插件库；
+*   基本使用：引入vue.js，创建vue实例对象，其中el代表dom标签选择器，data代表初始化数据对象；
+*   `el`：指定dom标签容器的选择器，一般写一个根标签；
+*   `data`：对象或者函数类型，指定初始化状态属性数据的对象，页面中可以使用`{{xxx}}`直接访问
+*   `methods`：包含多个方法的对象，供页面中的事件指令来回调，回调函数默认有`$event`参数，也可以指定自己的参数，在方法中，访问data中的属性直接使用`this.xxx`；
+*   `computed`：计算属性，包含多个方法的对象，对状态属性进行计算处理后返回给页面一个新的数据，使用get和set方法实现属性的计算读取，同时监视数据的变化；
+*   `watch`：监视，包含多个属性监视的对象，`xxx.function(value){}`，可以传入两个参数，代表新值和改变前的值，也可以使用`vm.$watch('xxx', function(value){})`的方式添加监听；
+*   vue中的过渡和动画，实质就是vue操作css的transition/animation属性；
+*   生命周期：常用的钩子函数是`created() / mounted()`: 启动异步任务(启动定时器,发送ajax请求, 绑定监听)和`beforeDestroy()`: 做一些收尾的工作例如清除定时器等；
+*   自定义过滤器：使用的是`Vue.filter(filterName,function(value){})`，在页面使用方法：`{{myData | filterName(arg)}}`，参数可传可不传；
+*   vue内置指令：`v-for遍历`、`@绑定事件`、`v-model数据双向绑定`、`ref标识标签`；
+*   自定义指令：使用`Vue.directive`注册全局指令，使用`directives`注册局部指令；
 
 # 二、Vue组件化编码方式
 
