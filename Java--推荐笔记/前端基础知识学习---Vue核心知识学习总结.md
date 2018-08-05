@@ -522,7 +522,66 @@
 
 ## 1.10.Vue的生命周期
 
+![](http://image.luokangyuan.com/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE.png)
 
+常用的生命周期方法：`create()/mounted()`:常用于发送Ajax请求启动定时器等异步任务，`beforeDestory()`：常用于做一些收尾工作，例如关闭定时器；
+
+```html
+<body>
+    <div id="app">
+        <button @click= "destoryVm">点击我取消Vue实例</button>
+        <p v-show = "isShow">我是四川码酱</p>
+    </div>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: "#app",
+            data: {
+                isShow: true
+            },
+            beforeCreate() {
+                console.log("我是beforeCreate方法，我被执行了");
+            },
+            created() {
+                console.log("我是created方法，我被执行了");
+            },
+            beforeMount() {
+                console.log("我是beforeMount方法，我被执行了");
+            },
+            mounted(){ // 初始化显示之后立即调用，也是执行一次
+                this.intervalId = setInterval(() =>{
+                    console.log("=====");
+                    this.isShow = !this.isShow;
+                }, 1000)
+            },
+            beforeUpdate() {
+                console.log("我是beforeUpdate方法，我被执行了");
+            },
+            updated() {
+                console.log("我是updated方法，我被执行了");
+            },
+            beforeDestroy() { // 死亡之前回调一次
+                // 清除定时器
+                clearInterval(this.intervalId)
+            },
+            destroyed() {
+                console.log("我是destroyed方法，我被执行了");
+            },
+            methods: {
+                destoryVm(){
+                    this.$destroy();
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+>   说明：`beforeCreate、created、beforeMount、mounted`初始化方法只执行一次，`beforeUpdate、updated`执行多次，`beforeDestroy、destroyed`死亡方法，也执行一次；
+
+## 1.11.过渡和动画
+
+在vue中动画就是操作css的trasition或者animation属性，vue会给目标元素添加和移除指定的class，只不过要遵循一定的命名规则，
 
 # 二、Vue组件化编码方式
 
