@@ -832,9 +832,89 @@ vue-cli是vue官方提供的脚手架工具，首先确认安装了node和npm，
 *   package.json: 应用包配置文件
 *   README.md: 应用描述说明的 readme 文件
 
+`简单的使用Vue模板项目`
+
+首先，我们编写了一个HelloWord的组件，
+
+```vue
+<template>
+    <div class="hello">
+        <h1 class="msg">{{ msg }}</h1>
+    </div>
+</template>
+
+<script>
+export default {
+    // 配置对象和Vue一致
+    data() {
+        // data可以 写对象和函数，但是在组件中必须使用函数
+        return {
+            msg: "Hello Welcome to My Vue"
+        };
+    }
+};
+</script>
+
+<style scoped>
+    .msg {
+        color: red
+    }
+</style>
+```
+
+然后，我们在App.vue中使用我们自己定义的组件
+
+```vue
+<template>
+  <div id="app">
+    <img class="logo" src="./assets/logo.png">
+    <!-- 使用组件标签 -->
+    <HelloWorld/> 
+  </div>
+</template>
+
+<script>
+// 1.引入需要使用的vue组件（HelloWoed组件）
+import HelloWorld from './components/HelloWorld'
+
+export default {
+  components: { // 2.映射组件标签
+    HelloWorld
+  }
+}
+</script>
+
+<style>
+.logo{
+    width: 100px;
+    height: 100px;
+}
+</style>
+```
+
+我们知道使用Webpack打包后会生成一个js文件，也就是入口文件main.js
+
+```javascript
+import Vue from 'vue'
+import App from './App'
+
+Vue.config.productionTip = false
+
+new Vue({
+  el: '#app', // 挂载到入口Dom节点（index.html）
+  components: { App }, // 映射组件标签
+  template: '<App/>' //使用标签
+})
+
+```
+
 ## 2.2.项目打包发布方式
 
+打包命令：`npm run build`
 
+使用静态服务器：安装命令：`npm install -g serve`，发布命令：`serve dist`，然后直接访问就可以了
+
+使用动态web服务器（Tomcat）:修改webpack.prod.conf.js，加入`output: {publicPath: '/xxx/' //打包文件夹的名称}`，然后重新打包，将dis文件夹的名称改为项目名称，放在tomcat的webapp目录下，访问即可；
 
 # 三、Vue请求方式vue-ajax
 
