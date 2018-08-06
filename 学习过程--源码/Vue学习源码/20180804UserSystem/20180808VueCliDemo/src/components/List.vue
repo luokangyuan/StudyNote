@@ -22,12 +22,9 @@ import Item from './Item.vue' // 使用Item组件
 .reply {
     margin-top: 0px;
 }
-
-
 .list-group-item .centence {
     padding: 0px 50px;
 }
-
 .user {
     font-size: 22px;
 }
