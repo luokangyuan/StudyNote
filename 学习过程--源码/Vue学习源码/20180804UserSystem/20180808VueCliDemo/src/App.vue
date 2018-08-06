@@ -11,17 +11,36 @@
         </header>
         <div class="container">
             <Add/>
-            <List/>
+            <!-- 组件之间的通信，向子组件传递数组 -->
+            <List :comments = "comments"/> 
         </div>
     </div>
 </template>
 
 <script>
-// 1.引入需要使用的vue组件（HelloWoed组件）
-import Add from "./components/Add";
-import List from "./components/List";
+// 1.引入需要使用的vue组件
+import Add from "./components/Add.vue";
+import List from "./components/List.vue";
 
 export default {
+    data(){
+        return {
+            comments: [
+                {
+                    name: '张三',
+                    content: 'Vue使用了一段时间，还不错'
+                },
+                 {
+                    name: '李四',
+                    content: 'Vue使用了一段时间，还不错'
+                },
+                 {
+                    name: '王五',
+                    content: 'Vue使用了一段时间，还不错'
+                }
+            ]
+        }
+    },
     components: {
         // 2.映射组件标签
         Add,
@@ -31,8 +50,5 @@ export default {
 </script>
 
 <style>
-.logo {
-    width: 100px;
-    height: 100px;
-}
+
 </style>
