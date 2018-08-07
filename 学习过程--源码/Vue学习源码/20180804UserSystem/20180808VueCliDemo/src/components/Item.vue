@@ -37,5 +37,8 @@ li {
     display: block;
     text-decoration: none;
 }
+.user {
+    font-size: 22px;
+}
 </style>
 
