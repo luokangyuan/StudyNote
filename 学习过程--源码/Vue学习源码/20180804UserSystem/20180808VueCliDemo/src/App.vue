@@ -13,7 +13,7 @@
             <!-- 组件之间将方法传递给子组件 -->
             <Add :addComment = "addComment"/>
             <!-- 组件之间的通信，向子组件传递数组 -->
-            <List :comments = "comments"/> 
+            <List :comments = "comments" :deleteComment = "deleteComment"/> 
         </div>
     </div>
 </template>
@@ -46,6 +46,10 @@ export default {
         // 添加评论
         addComment (comment){
             this.comments.unshift(comment);
+        },
+        // 删除指定下标的评论
+        deleteComment(index) {
+            this.comments.splice(index,1)
         }
     },
     components: {

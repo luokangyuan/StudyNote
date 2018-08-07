@@ -1,10 +1,10 @@
 <template>
     <div class="col-md-8">
         <h3 class="reply">评论回复：</h3>
-        <h2 style='display: none'>暂无评论，点击左侧添加评论！！！</h2>
+        <h2 v-show="comments.length ===0">暂无评论，点击左侧添加评论！！！</h2>
         <ul class="list-group">
             <!-- 遍历父组件App传递的数据，将每一个数据传递给Item组件 -->
-            <Item v-for="(comment,index) in comments" :key="index" :comment="comment"></Item>
+            <Item v-for="(comment,index) in comments" :key="index" :comment="comment" :deleteComment = "deleteComment" :index = "index"></Item>
         </ul>
     </div>
 </template>
@@ -12,7 +12,7 @@
 import Item from "./Item.vue"; // 使用Item组件
 export default {
     // 声明接收父组件传递的数据属性，这个属性就会成为组件对象的属性
-    props: ["comments"],
+    props: ["comments","deleteComment"],
     components: {
         Item
     }
@@ -25,8 +25,6 @@ export default {
 .list-group-item .centence {
     padding: 0px 50px;
 }
-.user {
-    font-size: 22px;
-}
+
 </style>
 
