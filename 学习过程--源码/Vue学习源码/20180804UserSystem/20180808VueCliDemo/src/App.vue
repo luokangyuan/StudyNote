@@ -10,7 +10,8 @@
             </div>
         </header>
         <div class="container">
-            <Add/>
+            <!-- 组件之间将方法传递给子组件 -->
+            <Add :addComment = "addComment"/>
             <!-- 组件之间的通信，向子组件传递数组 -->
             <List :comments = "comments"/> 
         </div>
@@ -39,6 +40,12 @@ export default {
                     content: 'Vue使用了一段时间，还不错'
                 }
             ]
+        }
+    },
+    methods: {
+        // 添加评论
+        addComment (comment){
+            this.comments.unshift(comment);
         }
     },
     components: {

@@ -19,6 +19,13 @@
 </template>
 <script>
     export default {
+        // 接收App组件传递的方法
+        props: {
+            addComment: {
+                type: Function,
+                required: true
+            }
+        },
         data() {
             return {
                  name: '',
@@ -30,8 +37,20 @@
                 // 检查输入的合法性
                 const name = this.name.trim();
                 const content = this.content.trim();
+                if(!name || !content){
+                    alert('姓名或者内容不能为空！！')
+                    return;
+                }
                 // 根据输入的数据，封装成个comment对象
+                const comment = {
+                    name,
+                    content
+                }
                 // 添加到comments中
+                this.addComment(comment);
+                // 清除输入
+                this.name = '';
+                this.content = ''
             }
         }
     }
