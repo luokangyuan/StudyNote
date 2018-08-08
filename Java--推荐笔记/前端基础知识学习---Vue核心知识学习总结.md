@@ -918,6 +918,12 @@ new Vue({
 
 使用动态web服务器（Tomcat）:修改webpack.prod.conf.js，加入`output: {publicPath: '/xxx/' //打包文件夹的名称}`，然后重新打包，将dis文件夹的名称改为项目名称，放在tomcat的webapp目录下，访问即可；
 
+## 2.3.组件的定义
+
+
+
+
+
 # 三、Vue请求方式vue-ajax
 
 
