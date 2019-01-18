@@ -1,7 +1,7 @@
-####下面学习的是数据库相关知识
+#### 下面学习的是数据库相关知识
 数据库使用的是MySQL，持久化技术使用的就是spring-data-jpa,RESTFul API如下
 ![](https://i.imgur.com/x2JhG2P.png)
-####1.pom文件中添加依赖
+#### 1.pom文件中添加依赖
 
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -12,7 +12,7 @@
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
 	</dependency>
-####2.application.yml文件中配置数据库信息和jpa
+#### 2.application.yml文件中配置数据库信息和jpa
 	
 	spring:
 	  profiles:
